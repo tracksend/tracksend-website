@@ -46,7 +46,7 @@ export default function PricingPage() {
           setExchangeRates(ratesData.rates);
         }
       } catch (error) {
-        console.log("[v0] Error fetching location/rates:", error);
+        console.log("Error fetching location/rates:", error);
       } finally {
         setLoading(false);
       }

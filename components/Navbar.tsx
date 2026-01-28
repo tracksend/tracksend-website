@@ -77,13 +77,13 @@ const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://app.tracksend.co/login"
             className={`text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
           >
             Login
           </a>
-          <button className="rounded-full bg-primary px-6 py-2 text-sm font-bold text-navy hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all">
-            Start Free
+          <button className="rounded-full bg-secondary px-8 py-3 text-sm font-bold text-white hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
+            <Link href="https://app.tracksend.co/register">Start Free</Link>
           </button>
         </div>
       </div>

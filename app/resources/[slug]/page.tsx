@@ -75,10 +75,10 @@ export default async function BlogPostPage({
                 The blog post you are looking for does not exist.
               </p>
               <Link
-                href="/blog"
+                href="/resources"
                 className="text-primary hover:underline font-semibold"
               >
-                Back to blog
+                Back to resources
               </Link>
             </div>
           </div>
@@ -103,10 +103,10 @@ export default async function BlogPostPage({
           {/* Header */}
           <header className="mb-12 border-b border-gray-200 pb-8">
             <Link
-              href="/blog"
+              href="/resources"
               className="text-primary hover:underline mb-4 inline-block"
             >
-              ← Back to blog
+              ← Back to resources
             </Link>
             <h1 className="text-4xl lg:text-5xl font-bold text-navy-dark mb-4 leading-tight">
               {post.title.rendered.replace(/&amp;/g, "&")}

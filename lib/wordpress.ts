@@ -81,8 +81,6 @@ export async function fetchPostBySlug(slug: string) {
       return null;
     }
 
-    console.log({ url, response });
-
     const posts = (await response.json()) as WordPressPost[];
     return posts.length > 0 ? posts[0] : null;
   } catch (error) {

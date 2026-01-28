@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-225 flex flex-col pt-20 overflow-hidden bg-navy pb-24">
-        <div className="absolute inset-0 z-0 opacity-15">
+        <div className="absolute inset-0 z-0 opacity-40">
           <img
             alt="Hero Background"
             className="h-full w-full object-cover"
@@ -438,7 +438,7 @@ export default function Home() {
         </div>
       </section> */}
       {/* Use Cases Section */}
-      <section className="bg-tint-coral/30 py-24 relative overflow-hidden">
+      <section className="bg-#f6e0d9 bg-tint-coral/30 py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern-coral opacity-20 pointer-events-none"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -464,7 +464,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
             <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-green-100 bg-tint-coral/30 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-green-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 mb-4">
                   Lead Gen
@@ -490,7 +490,7 @@ export default function Home() {
                   </li>
                 </ul> */}
                 <a
-                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  className="text-green-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
                   href="#"
                 >
                   Learn more{" "}
@@ -501,7 +501,7 @@ export default function Home() {
               </div>
             </div>
             <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100 bg-tint-cyan/30 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
                   Ecommerce
@@ -566,7 +566,7 @@ export default function Home() {
                   </li>
                 </ul> */}
                 <a
-                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  className="text-purple-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
                   href="#"
                 >
                   Learn more{" "}
@@ -603,7 +603,7 @@ export default function Home() {
                   </li>
                 </ul> */}
                 <a
-                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  className="text-orange-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
                   href="#"
                 >
                   Learn more{" "}
@@ -746,7 +746,7 @@ export default function Home() {
       {/* CTA Section - NEW */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="rounded-[3rem] bg-gradient-to-br from-navy to-navy-dark p-12 md:p-24 relative overflow-hidden text-center shadow-2xl">
+          <div className="rounded-[3rem] bg-linear-to-br from-navy to-navy-dark p-12 md:p-24 relative overflow-hidden text-center shadow-2xl">
             <div className="absolute top-0 left-0 w-full h-full bg-pattern-cyan opacity-5 pointer-events-none"></div>
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
