@@ -91,7 +91,7 @@ export default async function BlogPage({
                   return (
                     <Link
                       key={post.id}
-                      href={`/blog/${post.slug}`}
+                      href={`/resources/${post.slug}`}
                       className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
                     >
                       {/* Featured Image */}
