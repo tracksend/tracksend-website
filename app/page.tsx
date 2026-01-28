@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="bg-tint-coral/30 py-24 relative overflow-hidden">
+      {/* <section className="bg-tint-coral/30 py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern-coral opacity-20 pointer-events-none"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -432,6 +432,185 @@ export default function Home() {
                     98% open rates
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      {/* Use Cases Section */}
+      <section className="bg-tint-coral/30 py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-pattern-coral opacity-20 pointer-events-none"></div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-xl text-left">
+              <h2 className="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-4">
+                Solutions by goals
+              </h2>
+              <h3 className="text-4xl font-extrabold text-navy-dark tracking-tight">
+                High-conversion growth strategies.
+              </h3>
+            </div>
+            {/* <div className="hidden md:block">
+              <a
+                className="text-sm font-bold text-navy-dark hover:text-secondary transition-colors flex items-center gap-2"
+                href="#"
+              >
+                Explore all use cases{" "}
+                <span className="material-symbols-outlined text-sm">
+                  arrow_forward
+                </span>
+              </a>
+            </div> */}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
+            <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-green-100 bg-tint-coral/30 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 mb-4">
+                  Lead Gen
+                </span>
+                <h4 className="text-lg font-bold text-navy-dark mb-2">
+                  Instant Qualification
+                </h4>
+                <p className="text-text-main/80 text-sm leading-relaxed mb-6">
+                  Route hot prospects to your CRM instantly after a text opt-in
+                </p>
+                {/* <ul className="space-y-2 mt-auto">
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-green-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    25% higher recovery rate
+                  </li>
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-green-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    Rich media product cards
+                  </li>
+                </ul> */}
+                <a
+                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  href="#"
+                >
+                  Learn more{" "}
+                  <span className="material-symbols-outlined text-sm ml-1">
+                    arrow_forward
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100 bg-tint-cyan/30 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-4">
+                  Ecommerce
+                </span>
+                <h4 className="text-lg font-bold text-navy-dark mb-2">
+                  Cart Recovery
+                </h4>
+                <p className="text-text-main/80 text-sm leading-relaxed mb-6">
+                  Win back 25%• of lost carts With timed multi-channel
+                  reminders.
+                </p>
+                <a
+                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  href="#"
+                >
+                  Learn more{" "}
+                  <span className="material-symbols-outlined text-sm ml-1">
+                    arrow_forward
+                  </span>
+                </a>
+                {/* <ul className="space-y-2 mt-auto">
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-blue-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    Instant response time
+                  </li>
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-blue-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    CRM sync included
+                  </li>
+                </ul> */}
+              </div>
+            </div>
+            <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-purple-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4">
+                  Product
+                </span>
+                <h4 className="text-lg font-bold text-navy-dark mb-2">
+                  VIP Launches
+                </h4>
+                <p className="text-text-main/80 text-sm leading-relaxed mb-6">
+                  Create hype with SMS-exclusive drops and waitlist
+                  notifications.
+                </p>
+                {/* <ul className="space-y-2 mt-auto">
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-purple-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    40% fewer support tickets
+                  </li>
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-purple-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    98% open rates
+                  </li>
+                </ul> */}
+                <a
+                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  href="#"
+                >
+                  Learn more{" "}
+                  <span className="material-symbols-outlined text-sm ml-1">
+                    arrow_forward
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-orange-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-700/10 mb-4">
+                  Customer Success
+                </span>
+                <h4 className="text-lg font-bold text-navy-dark mb-2">
+                  Active Retention
+                </h4>
+                <p className="text-text-main/80 text-sm leading-relaxed mb-6">
+                  Automate renewal reminders and NPS surveys via WhatsApp.
+                </p>
+                {/* <ul className="space-y-2 mt-auto">
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-purple-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    40% fewer support tickets
+                  </li>
+                  <li className="flex items-center text-xs text-text-muted font-medium">
+                    <span className="material-symbols-outlined text-purple-500 text-sm mr-2">
+                      check_circle
+                    </span>
+                    98% open rates
+                  </li>
+                </ul> */}
+                <a
+                  className="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
+                  href="#"
+                >
+                  Learn more{" "}
+                  <span className="material-symbols-outlined text-sm ml-1">
+                    arrow_forward
+                  </span>
+                </a>
               </div>
             </div>
           </div>

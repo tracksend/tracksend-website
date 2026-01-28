@@ -24,8 +24,6 @@ export default async function BlogPage({
   const page = parseInt(searchParams.page || "1", 10);
   const result = await fetchPosts(page, 10);
 
-  console.log("result: ", result);
-
   if (!result) {
     return (
       <>

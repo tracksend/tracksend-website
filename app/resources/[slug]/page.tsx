@@ -60,8 +60,6 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params;
   const post = await fetchPostBySlug(slug);
-  console.log("Blog Post Page", { slug, params: await params });
-  console.log("Blog Post Pages post", post);
 
   if (!post) {
     return (

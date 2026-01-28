@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     <nav className={navClass}>
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-navy">
+          {/* <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-navy">
             <span className="material-symbols-outlined font-bold text-lg">
               send
             </span>
@@ -37,7 +37,20 @@ const Navbar: React.FC = () => {
             className={`text-lg font-bold tracking-tight ${isLanding && !isScrolled ? "text-white" : "text-navy-dark"}`}
           >
             Tracksend
-          </span>
+          </span> */}
+          {isLanding && !isScrolled ? (
+            <img
+              alt="Hero Background"
+              className="h-auto w-60 object-fit"
+              src="/tracksendlogowhite.png"
+            />
+          ) : (
+            <img
+              alt="Hero Background"
+              className="h-auto w-60 object-fit"
+              src="/tracksendlogo.png"
+            />
+          )}
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -55,10 +68,10 @@ const Navbar: React.FC = () => {
             Pricing
           </Link>
           <Link
-            href="/blog"
+            href="/resources"
             className={`text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
           >
-            Resource
+            Resources
           </Link>
         </div>
 
