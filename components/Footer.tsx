@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               </span> */}
               <img
                 alt="Hero Background"
-                className="h-auto w-50 object-fit -translate-x-8"
+                className="h-auto w-40 object-fit"
                 src="/tracksendlogowhite.png"
               />
             </div>

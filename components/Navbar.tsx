@@ -44,13 +44,13 @@ const Navbar: React.FC = () => {
           {isLanding && !isScrolled ? (
             <img
               alt="Hero Background"
-              className="h-auto w-60 object-fit"
+              className="h-auto w-40 object-fit"
               src="/tracksendlogowhite.png"
             />
           ) : (
             <img
               alt="Hero Background"
-              className="h-auto w-60 object-fit"
+              className="h-auto w-40 object-fit"
               src="/tracksendlogo.png"
             />
           )}
