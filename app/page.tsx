@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { CampaignDemo } from "@/components/CampaignDemo";
+import { CampaignPreview } from "@/components/CampaignPreview";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"sms" | "whatsapp">("sms");
@@ -171,8 +171,11 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <div className="mx-auto w-full max-w-5xl">
+          {/* <div className="mx-auto w-full max-w-5xl">
             <CampaignDemo />
+          </div> */}
+          <div className="mx-auto w-full max-w-5xl">
+            <CampaignPreview />
           </div>
         </div>
       </section>

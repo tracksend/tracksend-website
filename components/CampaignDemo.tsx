@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./globals.css";
 // import { rephraseMessage } from '../services/geminiService';
 
 export const CampaignDemo: React.FC = () => {
