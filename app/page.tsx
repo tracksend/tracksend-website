@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CampaignDemo } from "@/components/CampaignDemo";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"sms" | "whatsapp">("sms");
@@ -10,6 +11,37 @@ export default function Home() {
   const [message, setMessage] = useState(
     "Hi there! Your order #12345 has been shipped. Track it here: trck.sn/x9y8z",
   );
+
+  const featureData = [
+    {
+      title: "Launch campaigns",
+      desc: "Full tracking for SMS, WhatsApp, and RCS. Know exactly who clicked and when.",
+      icon: "rocket_launch",
+      colorClass: "bg-primary",
+      bgClass: "bg-tint-cyan/20 border-primary/10",
+    },
+    {
+      title: "Convert replies",
+      desc: "Use AI to qualify inbound leads and handle simple replies automatically.",
+      icon: "forum",
+      colorClass: "bg-secondary",
+      bgClass: "bg-white border-gray-100",
+    },
+    {
+      title: "Follow up",
+      desc: "Trigger sequences based on clicks, ignored messages, or purchase events.",
+      icon: "sync_alt",
+      colorClass: "bg-navy-dark",
+      bgClass: "bg-gray-50 border-gray-100",
+    },
+    {
+      title: "Manage conversations",
+      desc: "One unified inbox for all channels. Collaborate across your entire organization.",
+      icon: "inbox",
+      colorClass: "bg-secondary/80",
+      bgClass: "bg-tint-coral/20 border-secondary/10",
+    },
+  ];
 
   return (
     <div className="overflow-x-hidden">
@@ -45,7 +77,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mx-auto w-full max-w-4xl">
+          {/* <div className="mx-auto w-full max-w-4xl">
             <div className="rounded-[2rem] overflow-hidden bg-surface-card shadow-2xl border border-white/20 backdrop-blur-xl">
               <div className="grid md:grid-cols-5 items-stretch">
                 <div className="md:col-span-2 p-8 lg:p-10 bg-tint-cyan/30 flex flex-col justify-center">
@@ -138,6 +170,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div className="mx-auto w-full max-w-5xl">
+            <CampaignDemo />
           </div>
         </div>
       </section>
@@ -233,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl mb-16 text-left">
             <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
@@ -317,6 +352,42 @@ export default function Home() {
                 </span>
               </a>
             </div>
+          </div>
+        </div>
+      </section> */}
+      {/* Features Section */}
+      <section className="py-24 bg-white relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy-dark tracking-tight mb-4">
+              Everything you need to grow with messaging
+            </h2>
+            <p className="text-lg text-text-muted max-w-2xl mx-auto">
+              Scalable infrastructure designed for marketing, operations, and
+              support teams.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featureData.map((feature, i) => (
+              <div
+                key={i}
+                className={`p-8 rounded-[2rem] border hover:shadow-float transition-all group cursor-default ${feature.bgClass}`}
+              >
+                <div
+                  className={`w-12 h-12 ${feature.colorClass} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}
+                >
+                  <span className="material-symbols-outlined">
+                    {feature.icon}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-navy-dark mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-text-main/70 leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
