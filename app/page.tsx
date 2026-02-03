@@ -58,7 +58,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-linear-to-t from-navy via-transparent to-transparent"></div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full grow flex flex-col justify-center gap-12 mt-12">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 w-full grow flex flex-col justify-center gap-12 mt-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 mb-6 backdrop-blur-sm">
               <span className="flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>

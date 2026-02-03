@@ -151,3 +151,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Prevent layout shift when dropdowns or modals open by keeping a vertical scrollbar reserved */
+html {
+  overflow-y: scroll;
+}

@@ -5,10 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const pathname = usePathname();
   const isLanding = pathname === "/";
 
@@ -57,13 +64,41 @@ const Navbar: React.FC = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {/* <Link href="/" className={`text-sm font-semibold transition-colors hover:text-primary ${textClass}`}>Platform</Link> */}
-          <a
-            href="#"
-            className={`text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
+          <div
+            onMouseEnter={() => setIsSolutionsOpen(true)}
+            onMouseLeave={() => setIsSolutionsOpen(false)}
+            className="relative"
           >
-            Solutions
-          </a>
+            <DropdownMenu
+              open={isSolutionsOpen}
+              onOpenChange={setIsSolutionsOpen}
+              modal={false}
+            >
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`text-sm font-semibold transition-colors hover:text-primary ${textClass} outline-none`}
+                >
+                  Solutions
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="min-w-48">
+                <DropdownMenuItem asChild>
+                  <Link href="/solutions/product-managers">
+                    Product Managers
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/solutions/agencies">Agencies</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/solutions/founders">Founders</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/solutions/marketers">Marketers</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
           <Link
             href="/pricing"
             className={`text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
@@ -111,13 +146,41 @@ const Navbar: React.FC = () => {
                 {/* Navigation Items */}
                 <nav className="flex-1 px-6 py-8">
                   <div className="flex flex-col gap-1">
-                    <a
-                      href="#"
-                      className="px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Solutions
-                    </a>
+                    <div className="px-4 py-3">
+                      <div className="text-base font-medium text-gray-700">
+                        Solutions
+                      </div>
+                      <div className="mt-2 flex flex-col gap-1">
+                        <Link
+                          href="/solutions/product-managers"
+                          className="px-4 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Product Managers
+                        </Link>
+                        <Link
+                          href="/solutions/agencies"
+                          className="px-4 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Agencies
+                        </Link>
+                        <Link
+                          href="/solutions/founders"
+                          className="px-4 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Founders
+                        </Link>
+                        <Link
+                          href="/solutions/marketers"
+                          className="px-4 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Marketers
+                        </Link>
+                      </div>
+                    </div>
                     <Link
                       href="/pricing"
                       className="px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"

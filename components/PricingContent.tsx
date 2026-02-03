@@ -78,11 +78,11 @@ export default function PricingContent({
                 </span>
               </div>
               <select
-                value={location.country}
+                value={location.currency}
                 disabled
                 className="block w-full h-full pl-10 pr-10 py-2 text-base border-none rounded-lg bg-gray-50 cursor-not-allowed font-semibold text-navy-dark appearance-none"
               >
-                <option>{location.country}</option>
+                <option>{location.currency}</option>
               </select>
             </div>
             <div className="w-full sm:w-1/2 bg-gray-100 p-1 rounded-lg flex h-12">
