@@ -50,6 +50,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* <script
+          src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"
+          type="text/javascript"
+        ></script> */}
       </head>
       <body className={`font-sans antialiased`}>
         {children}
