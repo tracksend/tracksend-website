@@ -11,6 +11,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { ChevronDownIcon } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,6 +80,7 @@ const Navbar: React.FC = () => {
                   className={`text-sm font-semibold transition-colors hover:text-primary ${textClass} outline-none`}
                 >
                   Solutions
+                  <ChevronDownIcon className="inline-block ml-1 size-4 stroke-current" />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="min-w-48">
