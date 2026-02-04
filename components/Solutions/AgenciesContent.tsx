@@ -21,7 +21,7 @@ const AgenciesContent: React.FC = () => {
               Launch high-performing campaigns for{" "}
               <span className="text-primary">every client</span>
             </h1>
-            <p className="text-l text-slate-500 leading-relaxed max-w-lg">
+            <p className="text-lg text-slate-500 leading-relaxed max-w-lg">
               The all-in-one messaging platform built for agency scale. Increase
               retention and unlock new revenue with white-label solutions.
             </p>

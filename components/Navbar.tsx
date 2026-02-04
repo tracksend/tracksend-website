@@ -19,6 +19,9 @@ const Navbar: React.FC = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const pathname = usePathname();
   const isLanding = pathname === "/";
+  const isActive = (path: string) => pathname === path;
+
+  console.log({ pathname });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,18 +88,18 @@ const Navbar: React.FC = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="min-w-48">
                 <DropdownMenuItem asChild>
-                  <Link href="/solutions/product-managers">
+                  <Link className={`block px-4 py-2 text-sm ${isActive('/solutions/agencies') ? 'text-primary bg-primary/5' : 'text-gray-600 hover:bg-gray-50'}`} href="/solutions/agencies">Agencies</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link className={`block px-4 py-2 text-sm ${isActive('/solutions/founders') ? 'text-primary bg-primary/5' : 'text-gray-600 hover:bg-gray-50'}`} href="/solutions/founders">Founders</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link className={`block px-4 py-2 text-sm ${isActive('/solutions/marketers') ? 'text-primary bg-primary/5' : 'text-gray-600 hover:bg-gray-50'}`} href="/solutions/marketers">Marketers</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link className={`block px-4 py-2 text-sm ${isActive('/solutions/product-managers') ? 'text-primary bg-primary/5' : 'text-gray-600 hover:bg-gray-50'}`} href="/solutions/product-managers">
                     Product Managers
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions/agencies">Agencies</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions/founders">Founders</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/solutions/marketers">Marketers</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
