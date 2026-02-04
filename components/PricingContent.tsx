@@ -276,6 +276,20 @@ export default function PricingContent({
             </table>
           </div>
         </div>
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 text-center">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Request rates for other countries?
+            <a
+              className="text-secondary font-bold hover:underline transition-all ml-1 inline-flex items-center gap-0.5"
+              href="mailto:sales@tracksend.co?subject=Request%20Message%20Rate&body=Hello%2C%0A%0AI%E2%80%99d%20like%20to%20request%20messaging%20rates%20for%20countries%20other%20than%20my%20current%20location.%0APlease%20share%20the%20available%20countries%20and%20their%20respective%20rates.%0A%0AThank%20you."
+              // target="_blank"
+            >
+              Contact Sales{" "}
+              <span className="material-symbols-outlined text-[14px]"></span>
+            </a>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-gray-300 dark:bg-[#3a2d2a]"></div>
+        </div>
       </section>
 
       {/* Billing Process */}
