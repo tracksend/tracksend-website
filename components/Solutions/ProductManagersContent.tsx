@@ -28,14 +28,40 @@ const ProductManagersContent: React.FC = () => {
               </div>
             </div>
             <div className="flex-1 relative w-full">
-              <div className="relative w-full aspect-square rounded-3xl overflow-hidden group shadow-2xl">
-                <img 
-                  alt="Product Manager interacting with messaging interface" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISrAxG8V9l4IdCoxox4nRSknYhvCLtoIGhzyjTlXd1FBknP1F68P00SzYvB-JM1j0XDaVIwkr73e7BVozwLqW4t-UGkdVRvmwm-9INp-Z8ZcsL-tKY3VsJTaPyBirXVl1AmgpPyyMn7K7zRgQbqxfmaTPSg3uHnQA2yMU_vxhrQmDSu-Kckm9Bs02J5qgnjiSu13AEwxXsYNaK_IR0tiFRmwtUOSv_-bLiakqadHHirl4hg7AoIrwJa1bbVQDAnGUSb93EFZ_ijQ"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/40 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20">
+              <div className="relative w-full aspect-square rounded-3xl bg-gray-50 flex items-center justify-center p-8 lg:p-12 border border-gray-100 shadow-inner">
+                {/* Simple Architectural Diagram */}
+                <svg className="w-full h-full max-w-md text-brand-navy" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Lines */}
+                  <path d="M200 120V180" stroke="#2db9c8" strokeWidth="2" strokeDasharray="4 4"/>
+                  <path d="M120 200H180" stroke="#2db9c8" strokeWidth="2" strokeDasharray="4 4"/>
+                  <path d="M220 200H280" stroke="#2db9c8" strokeWidth="2" strokeDasharray="4 4"/>
+                  <path d="M200 220V280" stroke="#2db9c8" strokeWidth="2" strokeDasharray="4 4"/>
+                  
+                  {/* Central Hub */}
+                  <rect x="160" y="160" width="80" height="80" rx="12" fill="white" stroke="#2db9c8" strokeWidth="2" className="shadow-lg"/>
+                  <circle cx="200" cy="200" r="15" fill="#2db9c8" fillOpacity="0.2"/>
+                  <path d="M200 192V208M192 200H208" stroke="#2db9c8" strokeWidth="2" strokeLinecap="round"/>
+                  
+                  {/* Outer Nodes */}
+                  {/* Top: Trigger */}
+                  <rect x="160" y="60" width="80" height="60" rx="8" fill="white" stroke="#eeeeee" strokeWidth="2"/>
+                  <text x="200" y="95" textAnchor="middle" fill="#121c36" className="text-[10px] font-bold">EVENT API</text>
+                  
+                  {/* Left: SMS */}
+                  <rect x="40" y="170" width="80" height="60" rx="8" fill="white" stroke="#eeeeee" strokeWidth="2"/>
+                  <text x="80" y="205" textAnchor="middle" fill="#666" className="text-[10px] font-bold">SMS</text>
+                  
+                  {/* Right: WhatsApp */}
+                  <rect x="280" y="170" width="80" height="60" rx="8" fill="white" stroke="#eeeeee" strokeWidth="2"/>
+                  <text x="320" y="205" textAnchor="middle" fill="#666" className="text-[10px] font-bold">WHATSAPP</text>
+                  
+                  {/* Bottom: RCS */}
+                  <rect x="160" y="280" width="80" height="60" rx="8" fill="white" stroke="#eeeeee" strokeWidth="2"/>
+                  <text x="200" y="315" textAnchor="middle" fill="#666" className="text-[10px] font-bold">RCS RICH</text>
+                </svg>
+
+                {/* Floating Metrics Overlay */}
+                <div className="absolute bottom-12 right-12 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/20">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                       <span className="material-symbols-outlined">chat_bubble</span>
@@ -43,9 +69,6 @@ const ProductManagersContent: React.FC = () => {
                     <div>
                       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Live Campaign</p>
                       <p className="text-sm font-bold text-brand-navy">Onboarding Nudge #4</p>
-                    </div>
-                    <div className="ml-auto flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-600 rounded-full text-[10px] font-bold">
-                      <span className="size-1.5 bg-green-500 rounded-full"></span> ACTIVE
                     </div>
                   </div>
                   <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
@@ -64,7 +87,7 @@ const ProductManagersContent: React.FC = () => {
 
       {/* Efficiency Section */}
       <section className="section-padding bg-brand-teal/10">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
             <div className="flex-1 space-y-6">
               <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Unify product + marketing messaging</h2>
@@ -116,7 +139,7 @@ const ProductManagersContent: React.FC = () => {
 
       {/* Core Features */}
       <section className="section-padding bg-brand-peach/10">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10">
           <div className="text-center mb-16 lg:mb-20 space-y-4">
             <h2 className="text-4xl font-extrabold text-brand-navy">Core platform features</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to build robust, scalable messaging flows that your users will love.</p>
@@ -158,7 +181,7 @@ const ProductManagersContent: React.FC = () => {
 
       {/* Device Mockup Section */}
       <section className="section-padding bg-white overflow-hidden">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex flex-col items-center text-center">
+        <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10 flex flex-col items-center text-center">
           <div className="space-y-6 mb-16 max-w-3xl">
             <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Deliver rich experiences, not just text</h2>
             <p className="text-xl text-gray-500">Move beyond plain SMS. Use WhatsApp and RCS to send rich cards, quick replies, and secure payment confirmations.</p>
@@ -207,7 +230,7 @@ const ProductManagersContent: React.FC = () => {
 
       {/* Lifecycle & Integrations */}
       <section className="section-padding bg-brand-purple/5">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
+        <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-20 items-center">
             <div className="flex-1 space-y-8">
               <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">Master the user lifecycle</h2>
@@ -254,7 +277,7 @@ const ProductManagersContent: React.FC = () => {
 
       {/* CTA Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 text-center">
+        <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10 text-center">
           <div className="max-w-4xl mx-auto space-y-10">
             <h2 className="text-4xl md:text-6xl font-extrabold text-brand-navy tracking-tighter">Ready to upgrade your product messaging?</h2>
             <p className="text-xl text-gray-500">Join 500+ product teams delivering modern communication experiences at scale.</p>

@@ -52,19 +52,47 @@ const MarketersContent: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-2xl border border-border-gray bg-white p-4 shadow-2xl relative z-10">
-              <div className="aspect-[4/3] bg-gray-50 rounded-lg overflow-hidden relative">
-                <img 
-                  alt="Dashboard visual" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJvYDIgqYDmvHG83Te4ITcPA3c6-H1LkRBUBlbDxXDd51dvMywdU6sf51qoQbRqqt1ng3-h2ENSU7cE7n9YGOt9DMBj6VqKItaMwNm8lg8Hi7tW5sxJSC56IO0zlDPyDQWqjDgZ_EouAlGIT89WWZijjyBY91fc1Q_1l262VqBZzTQHXVkWeFCI9WUlE39BuZh7V6SWKDgNLamYvMse7GLCkxfbE6vhhRfRgBy3AK1DjwJkA2dmh5wHiIbToPdSPdJKyAdfq-v8Sw"
-                />
-                <div className="absolute top-4 right-4 bg-white p-3 rounded-xl shadow-lg border border-border-gray animate-bounce transition-all">
-                  <span className="material-symbols-outlined text-primary">sms</span>
-                </div>
-                <div className="absolute bottom-10 -left-6 bg-white p-3 rounded-xl shadow-lg border border-border-gray">
-                  <span className="material-symbols-outlined text-green-500">chat_bubble</span>
-                </div>
+            <div className="rounded-2xl border border-border-gray bg-gray-50 p-8 lg:p-12 shadow-inner relative z-10 flex items-center justify-center">
+              {/* Funnel/Growth Diagram */}
+              <svg className="w-full h-full max-w-sm" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Horizontal Flow Line */}
+                <path d="M40 150H360" stroke="#eeeeee" strokeWidth="2"/>
+                
+                {/* Nodes with increasing engagement indicators */}
+                {/* Node 1: Awareness */}
+                <g transform="translate(40, 150)">
+                  <circle cx="0" cy="0" r="12" fill="white" stroke="#2db9c8" strokeWidth="2"/>
+                  <rect x="-30" y="25" width="60" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
+                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">REACH</text>
+                  <path d="M-10 -40 L0 -20 L10 -40" stroke="#2db9c8" strokeWidth="1" strokeOpacity="0.3"/>
+                </g>
+                
+                {/* Node 2: Engagement */}
+                <g transform="translate(145, 150)">
+                  <circle cx="0" cy="0" r="16" fill="white" stroke="#2db9c8" strokeWidth="2"/>
+                  <rect x="-35" y="25" width="70" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
+                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">CLICK (15%)</text>
+                  <path d="M-15 -60 L0 -30 L15 -60" stroke="#2db9c8" strokeWidth="2" strokeOpacity="0.5"/>
+                </g>
+                
+                {/* Node 3: Conversion */}
+                <g transform="translate(255, 150)">
+                  <circle cx="0" cy="0" r="20" fill="white" stroke="#2db9c8" strokeWidth="2"/>
+                  <rect x="-35" y="25" width="70" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
+                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">CONVERT</text>
+                  <path d="M-20 -80 L0 -40 L20 -80" stroke="#2db9c8" strokeWidth="3"/>
+                </g>
+                
+                {/* Growth Curve Line */}
+                <path d="M40 140 C 145 120, 255 60, 360 20" stroke="#2db9c8" strokeWidth="2" strokeLinecap="round" strokeDasharray="4 4"/>
+                <text x="360" y="15" textAnchor="end" fill="#2db9c8" className="text-[10px] font-bold">ROI LIFT</text>
+              </svg>
+
+              <div className="absolute top-4 right-4 bg-white p-3 rounded-xl shadow-lg border border-border-gray animate-bounce transition-all">
+                <span className="material-symbols-outlined text-primary">sms</span>
+              </div>
+              <div className="absolute bottom-10 -left-6 bg-white p-3 rounded-xl shadow-lg border border-border-gray">
+                <span className="material-symbols-outlined text-green-500">chat_bubble</span>
               </div>
             </div>
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-teal/30 rounded-full blur-3xl -z-0"></div>
