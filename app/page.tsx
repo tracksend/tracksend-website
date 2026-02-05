@@ -271,31 +271,32 @@ export default function Home() {
       </section> */}
 
       {/* Results Section - Clean Image-based Logo Grid */}
-      <section className="bg-white py-20 relative overflow-hidden border-y border-gray-100">
+      <section className="bg-tint-cyan/30 py-20 relative overflow-hidden border-y border-gray-100">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">
               Trusted by the world's most innovative teams
             </h2>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-20 opacity-50 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-20 opacity-100 transition-all duration-500">
+            {/* <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-20 opacity-50 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100"> */}
             <img
-              className="h-8 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Shopify_logo_2018.svg"
               alt="Shopify"
             />
             <img
-              className="h-8 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg"
               alt="Salesforce"
             />
             <img
-              className="h-8 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               src="https://upload.wikimedia.org/wikipedia/commons/0/05/HubSpot_Logo.svg"
               alt="HubSpot"
             />
             <img
-              className="h-8 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Mailchimp_Logo.svg"
               alt="Mailchimp"
             />
@@ -305,7 +306,7 @@ export default function Home() {
               alt="Stripe"
             />
             <img
-              className="h-8 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg"
               alt="Slack"
             />
