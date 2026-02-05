@@ -238,7 +238,7 @@ const Navbar: React.FC = () => {
                     className="px-5 py-3 rounded-full bg-secondary text-white font-bold text-center hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Start Free
+                    Get Started
                   </Link>
                 </div>
               </div>

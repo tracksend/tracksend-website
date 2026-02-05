@@ -1,5 +1,6 @@
 import React from "react";
 import { Sparkles, Edit3 } from "lucide-react";
+import { StatusIndicators } from "./StatusIndicators";
 interface CampaignEditorProps {
   message: string;
   setMessage: (msg: string) => void;
@@ -77,7 +78,7 @@ export function CampaignEditor({
         </div>
       </div>
 
-      <div className="mt-3 text-[10px] text-gray-400 flex gap-2 flex-wrap">
+      {/* <div className="mt-3 text-[10px] text-gray-400 flex gap-2 flex-wrap">
         <span>Variables:</span>
         <span className="text-blue-500 font-medium bg-blue-50 px-1.5 py-0.5 rounded">
           {"{{first_name}}"}
@@ -85,6 +86,9 @@ export function CampaignEditor({
         <span className="text-blue-500 font-medium bg-blue-50 px-1.5 py-0.5 rounded">
           {"{{cart_id}}"}
         </span>
+      </div> */}
+      <div className="mt-6 w-full">
+        <StatusIndicators />
       </div>
     </div>
   );

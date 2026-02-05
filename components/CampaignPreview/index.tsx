@@ -9,8 +9,11 @@ import { StatusIndicators } from "./StatusIndicators";
 export function CampaignPreview() {
   const [activeTab, setActiveTab] = useState("sms");
   const [message, setMessage] = useState(
-    "Hi {{first_name}}, we noticed you left some items in your cart. Use code GROWTH20 for 20% off!\nCheck out here: https://trck.sn/{{cart_id}}",
+    "Hi there, we noticed you left some items in your cart. Use code GROWTH20 for 20% off!\nCheck out here: https://trck.sn/34ABCD",
   );
+  // const [message, setMessage] = useState(
+  //   "Hi {{first_name}}, we noticed you left some items in your cart. Use code GROWTH20 for 20% off!\nCheck out here: https://trck.sn/{{cart_id}}",
+  // );
   const reply = "Can I use this for the premium plan?";
   const aiResponse = "Yes! The code applies to all plans, including Premium.";
   const renderPreview = () => {
@@ -44,6 +47,9 @@ export function CampaignPreview() {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
+        {/* <div className="mt-6 w-full">
+          <StatusIndicators />
+        </div> */}
       </div>
 
       {/* Right Panel - Preview */}
@@ -53,10 +59,6 @@ export function CampaignPreview() {
 
         <div className="relative z-10">
           <PhoneFrame>{renderPreview()}</PhoneFrame>
-        </div>
-
-        <div className="mt-6 w-full">
-          <StatusIndicators />
         </div>
       </div>
     </div>
