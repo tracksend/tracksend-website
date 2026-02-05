@@ -270,77 +270,45 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* Results Section - Professional Logo Grid */}
-      <section className="bg-tint-cyan/30 py-16 relative overflow-hidden border-y border-gray-100">
+      {/* Results Section - Clean Image-based Logo Grid */}
+      <section className="bg-white py-20 relative overflow-hidden border-y border-gray-100">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-10">
+          <div className="text-center mb-12">
             <h2 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">
               Trusted by the world's most innovative teams
             </h2>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-24 opacity-100 transition-all duration-500">
-            {/* <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-24 opacity-40 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100"> */}
-            {/* NovaMart Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-navy-dark rounded flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-lg">
-                  shopping_basket
-                </span>
-              </div>
-              <span className="text-xl font-extrabold tracking-tight text-navy-dark">
-                NovaMart
-              </span>
-            </div>
-            {/* PayBright Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-lg">
-                  payments
-                </span>
-              </div>
-              <span className="text-xl font-extrabold tracking-tight text-navy-dark">
-                PayBright
-              </span>
-            </div>
-            {/* CloudScale Logo */}
-            <div className="flex items-center gap-1">
-              <span className="material-symbols-outlined text-navy-dark text-3xl">
-                cloud_queue
-              </span>
-              <span className="text-xl font-light tracking-widest text-navy-dark uppercase">
-                CloudScale
-              </span>
-            </div>
-            {/* Inboundly Logo */}
-            <div className="flex items-center gap-2">
-              <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black text-navy-dark italic">
-                  IN
-                </span>
-                <span className="h-1 w-full bg-primary rounded-full"></span>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-navy-dark">
-                boundly
-              </span>
-            </div>
-            {/* GlobalConnect Logo */}
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-navy-dark text-2xl">
-                public
-              </span>
-              <span className="text-xl font-bold text-navy-dark">
-                GlobalConnect
-              </span>
-            </div>
-            {/* SwiftCart Logo */}
-            <div className="flex items-center gap-1">
-              <span className="material-symbols-outlined text-secondary text-2xl">
-                bolt
-              </span>
-              <span className="text-xl font-extrabold tracking-tight text-navy-dark">
-                Swift<span className="font-normal">Cart</span>
-              </span>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 lg:gap-x-20 opacity-50 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+            <img
+              className="h-8 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Shopify_logo_2018.svg"
+              alt="Shopify"
+            />
+            <img
+              className="h-8 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg"
+              alt="Salesforce"
+            />
+            <img
+              className="h-8 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/HubSpot_Logo.svg"
+              alt="HubSpot"
+            />
+            <img
+              className="h-8 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Mailchimp_Logo.svg"
+              alt="Mailchimp"
+            />
+            <img
+              className="h-6 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Stripe_logo%2C_revised_2016.svg"
+              alt="Stripe"
+            />
+            <img
+              className="h-8 w-auto object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg"
+              alt="Slack"
+            />
           </div>
         </div>
       </section>
