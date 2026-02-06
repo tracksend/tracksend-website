@@ -172,7 +172,7 @@ const MarketersContent: React.FC = () => {
             {[
               { icon: 'rocket_launch', label: 'Launch', desc: 'Run engaging SMS, WhatsApp, and SMS with images and videos — with built-in tracking.', color: 'bg-brand-teal/40' },
               { icon: 'schema', label: 'Automate', desc: 'Follow up automatically using time-based and click-triggered sequences.', color: 'bg-brand-peach/40' },
-              { icon: 'ads_click', label: 'Convert', desc: 'Use AI to generate, nurture, and route replies into real conversions.', color: 'bg-brand-teal/40' },
+              { icon: 'ads_click', label: 'Convert', desc: 'Use AI to generate, nurture, and route leads and replies into real conversions.', color: 'bg-brand-teal/40' },
               { icon: 'monitoring', label: 'Manage', desc: 'Handle all conversations in one inbox with full visibility and control.', color: 'bg-brand-peach/40' }
             ].map((cap, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[16px] border border-border-gray hover:shadow-xl hover:shadow-primary/5 transition-all">
@@ -247,18 +247,18 @@ const MarketersContent: React.FC = () => {
             <span className="material-symbols-outlined text-5xl text-primary/30">format_quote</span>
           </div>
           <blockquote className="text-3xl md:text-4xl font-semibold text-deep-navy leading-[1.4] mb-12">
-            "Tracksend has completely changed how we think about customer outreach. Our SMS engagement rates are 10x higher than email, and the automation handles the work of a 5-person team."
+            "Tracksend has completely changed how we think about customer outreach. Our SMS and WhatsApp engagement rates are 10x higher than email"
           </blockquote>
           <div className="flex flex-col items-center">
             <div className="size-16 rounded-full overflow-hidden mb-4 border-2 border-primary/20 p-1">
               <img 
-                alt="Alex Rivera" 
+                alt="Oke" 
                 className="w-full h-full object-cover rounded-full" 
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
               />
             </div>
-            <p className="font-bold text-lg text-deep-navy">Alex Rivera</p>
-            <p className="text-gray-500 text-sm">Head of Growth, ScaleUp Inc.</p>
+            <p className="font-bold text-lg text-deep-navy"></p>
+            <p className="text-gray-500 text-sm">Head of Growth, SooyaBristo.</p>
           </div>
         </div>
       </section>
@@ -302,7 +302,7 @@ const MarketersContent: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-primary text-white h-14 px-10 rounded-full font-bold text-lg hover:opacity-90 transition-opacity">
-                Start free
+                Get Started
               </button>
               <button className="bg-white/10 text-white h-14 px-10 rounded-full font-bold text-lg hover:bg-white/20 transition-colors">
                 Book a demo
@@ -324,7 +324,7 @@ const MarketersContent: React.FC = () => {
               <a className="hover:text-white transition-colors" href="#">Careers</a>
               <a className="hover:text-white transition-colors" href="#">Contact</a>
             </div>
-            <p className="text-sm text-white/30">© 2024 Tracksend. All rights reserved.</p>
+            <p className="text-sm text-white/30">© 2026 Tracksend Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
