@@ -46,7 +46,7 @@ export const CampaignDemo: React.FC = () => {
           <div>
             <div className="flex items-center justify-between mb-3">
               <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                Campaign Template
+                Campaign Playground (type any message in the box)
               </label>
               <button
                 // onClick={handleAIRephrase}
