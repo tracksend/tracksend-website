@@ -99,7 +99,7 @@ const ProductManagersContent: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-brand-navy">No-code Template Editor</h4>
-                    <p className="text-gray-500">Marketing can tweak copy without a Jira ticket.</p>
+                    <p className="text-gray-500">Create and edit templates quickly — no Jira tickets, no deploys. </p>
                   </div>
                 </div>
                 <div className="flex gap-5 items-start">
@@ -107,8 +107,8 @@ const ProductManagersContent: React.FC = () => {
                     <span className="material-symbols-outlined">api</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-brand-navy">Single API Endpoint</h4>
-                    <p className="text-gray-500">One payload, multiple channels. Scale instantly.</p>
+                    <h4 className="font-bold text-lg text-brand-navy">Scalable API Endpoint</h4>
+                    <p className="text-gray-500">Support multiple channels. Scale instantly.</p>
                   </div>
                 </div>
               </div>
