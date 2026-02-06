@@ -90,8 +90,8 @@ const ProductManagersContent: React.FC = () => {
         <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
             <div className="flex-1 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Unify product + marketing messaging</h2>
-              <p className="text-lg text-gray-600 max-w-lg">Stop choosing between developer agility and marketing control. Tracksend brings both teams into a single flow for transactional and lifecycle comms.</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Build product messaging users actually notice</h2>
+              <p className="text-lg text-gray-600 max-w-lg">Send transactional alerts, lifecycle nudges, and rich notifications across SMS, WhatsApp, and RCS and handle replies without building everything from scratch.</p>
               <div className="grid gap-6 pt-4">
                 <div className="flex gap-5 items-start">
                   <div className="size-10 shrink-0 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
