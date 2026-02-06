@@ -29,7 +29,7 @@ export default function Home() {
     },
     {
       title: "Follow up",
-      desc: "Trigger sequences based on clicks, ignored messages, or purchase events.",
+      desc: "Trigger sequences based on clicks, ignored messages, or number of days.",
       icon: "sync_alt",
       colorClass: "bg-navy-dark",
       bgClass: "bg-gray-50 border-gray-100",
@@ -584,13 +584,13 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-green-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 mb-4">
-                  Lead Gen
+                  Sales Auto
                 </span>
                 <h4 className="text-lg font-bold text-navy-dark mb-2">
-                  Instant Qualification
+                  Capture Leads
                 </h4>
                 <p className="text-text-main/80 text-sm leading-relaxed mb-6">
-                  Route hot prospects to your CRM instantly after a text opt-in
+                  Handle orders at scale and capture leads from ads via WhatsApp
                 </p>
                 {/* <ul className="space-y-2 mt-auto">
                   <li className="flex items-center text-xs text-text-muted font-medium">
@@ -659,14 +659,15 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-purple-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4">
-                  Product
+                  Marketing
                 </span>
                 <h4 className="text-lg font-bold text-navy-dark mb-2">
-                  VIP Launches
+                  Product Launches
                 </h4>
                 <p className="text-text-main/80 text-sm leading-relaxed mb-6">
-                  Create hype with SMS-exclusive drops and waitlist
-                  notifications.
+                  Send rich promo messages and automate follow-ups 
+                  on SMS and WhatsApp.
+            
                 </p>
                 {/* <ul className="space-y-2 mt-auto">
                   <li className="flex items-center text-xs text-text-muted font-medium">
@@ -697,13 +698,13 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-700/10 mb-4">
-                  Customer Success
+                  CX
                 </span>
                 <h4 className="text-lg font-bold text-navy-dark mb-2">
-                  Active Retention
+                  Renewals & Retention
                 </h4>
                 <p className="text-text-main/80 text-sm leading-relaxed mb-6">
-                  Automate renewal reminders and NPS surveys via WhatsApp.
+                  Automate renewal reminders and provide sales support via WhatsApp.
                 </p>
                 {/* <ul className="space-y-2 mt-auto">
                   <li className="flex items-center text-xs text-text-muted font-medium">
@@ -842,9 +843,9 @@ export default function Home() {
             </div>
           </div>
           <blockquote className="text-3xl md:text-4xl font-extrabold text-navy leading-tight tracking-tight mb-12">
-            “Tracksend didn't just give us a tool; they gave us a whole new way
-            to connect with our customers. Our engagement rates jumped 40% in
-            the first month alone.”
+            “Tracksend transformed how we track and act on our marketing campaigns. 
+            Integrations like SMS with our Prestashop stack meant we met — and often exceeded — our KPIs. 
+            Their support team is quick and helpful, making implementation stress-free.”
           </blockquote>
           <div className="flex flex-col items-center">
             <img
@@ -852,9 +853,9 @@ export default function Home() {
               alt="CEO"
               className="w-20 h-20 rounded-full border-4 border-slate-50 mb-4 object-cover shadow-lg"
             />
-            <h5 className="font-black text-navy text-lg">Marcus Holloway</h5>
+            <h5 className="font-black text-navy text-lg">Dami</h5>
             <p className="text-sm font-bold text-text-muted uppercase tracking-widest">
-              Director of Growth, FinStream
+             Head of Marketing, Medplus
             </p>
           </div>
         </div>
@@ -867,7 +868,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-pattern-cyan opacity-5 pointer-events-none"></div>
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
-                Ready to transform your conversations?
+                Ready to turn SMS and WhatsApp into a growth engine??
               </h2>
               <p className="text-xl text-gray-300 mb-12 font-medium">
                 Join 2,000+ businesses using Tracksend to scale their engagement
@@ -879,7 +880,7 @@ export default function Home() {
                     href="/pricing"
                     // className="px-4 py-3 text-center text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                   >
-                    Start your free trial
+                    Start your free 
                   </a>
                 </button>
                 <button className="px-10 py-4 bg-white/10 text-white rounded-2xl font-black text-lg border border-white/20 hover:bg-white/20 transition-all">
