@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               London
             </div>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-              Johannesburg
+            Durban
             </div>
             <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
               Lagos
