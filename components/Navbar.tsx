@@ -251,7 +251,7 @@ const Navbar: React.FC = () => {
             Login
           </a>
           <button className="hidden md:block rounded-full bg-secondary px-5 py-2 md:px-8 md:py-3 text-sm font-bold text-white hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
-            <Link href="https://app.tracksend.co/register">Start Free</Link>
+            <Link href="https://app.tracksend.co/register">Get Started</Link>
           </button>
         </div>
       </div>
