@@ -14,19 +14,19 @@ const FoundersContent: React.FC = () => {
               Built for early-stage & growth
             </div>
             <h1 className="text-4xl lg:text-5xl font-extrabold leading-[1.05] tracking-tight text-slate-900 mb-8 font-display">
-              Scale your startup with{" "}
+              Scale your business with{" "}
               <span className="text-primary">automated</span> engagement
             </h1>
             <p className="text-l text-slate-500 leading-relaxed mb-10 max-w-lg">
               The messaging infrastructure that helps founders automate sales,
-              qualify leads, and support customers without increasing headcount.
+              generate leads, and support customers without increasing headcount.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="px-10 py-5 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-1 transition-all text-lg">
-                Launch your platform
+                Get Started
               </button>
               <button className="px-10 py-5 border-2 border-slate-100 text-slate-900 font-bold rounded-2xl hover:bg-slate-50 transition-all text-lg">
-                View Demo
+                Book Demo
               </button>
             </div>
           </div>
