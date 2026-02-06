@@ -71,9 +71,8 @@ export default function Home() {
               <span className="text-gradient-cyan">opportunity.</span>
             </h1>
             <p className="text-lg text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8">
-              The platform that transforms simple notifications into two-way
-              conversations that convert, engage, and delight your customers at
-              scale.
+              Send SMS, rich SMS with images and videos, and WhatsApp messages with engagement tracking, 
+              automated follow-ups, and AI-driven replies — all from one simple platform
             </p>
           </div>
 
