@@ -871,7 +871,7 @@ export default function Home() {
                 Ready to turn messaging into a growth engine?
               </h2>
               <p className="text-xl text-gray-300 mb-12 font-medium">
-                Join 2,000+ businesses using Tracksend to scale their engagement
+                Start businesses using Tracksend to scale their engagement
                 effortlessly.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -880,7 +880,7 @@ export default function Home() {
                     href="/pricing"
                     // className="px-4 py-3 text-center text-base font-semibold text-gray-700 hover:text-primary transition-colors"
                   >
-                    Start your free 
+                   Get Started 
                   </a>
                 </button>
                 <button className="px-10 py-4 bg-white/10 text-white rounded-2xl font-black text-lg border border-white/20 hover:bg-white/20 transition-all">
