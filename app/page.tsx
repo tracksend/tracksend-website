@@ -409,8 +409,8 @@ export default function Home() {
               Everything you need to grow with messaging
             </h2>
             <p className="text-lg text-text-muted max-w-2xl mx-auto">
-              Scalable infrastructure designed for marketing, operations, and
-              support teams.
+              Scalable infrastructure designed for marketing, product, and
+              CX teams.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
