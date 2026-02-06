@@ -40,14 +40,14 @@ const MarketersContent: React.FC = () => {
               Turn messaging into a <span className="text-primary">predictable growth</span> channel
             </h1>
             <p className="mt-8 text-lg text-gray-500 max-w-lg leading-relaxed">
-              Connect with customers on the channels they actually use. SMS, WhatsApp, and RCS automation built for high-performance marketing teams.
+              Connect with customers on the channels they actually use. SMS, WhatsApp, and RCS automation built for marketing teams.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <button className="bg-primary text-white h-14 px-8 rounded-full font-bold text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                Start free
+               Get Started
               </button>
               <button className="border-2 border-border-gray text-deep-navy h-14 px-8 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
-                See campaign examples
+               Book Demo
               </button>
             </div>
           </div>
@@ -170,10 +170,10 @@ const MarketersContent: React.FC = () => {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: 'rocket_launch', label: 'Launch', desc: 'Broadcast campaigns across SMS, WhatsApp, and RCS in minutes with global deliverability.', color: 'bg-brand-teal/40' },
-              { icon: 'schema', label: 'Automate', desc: 'Build sophisticated drip flows and behavioral triggers without a single line of code.', color: 'bg-brand-peach/40' },
-              { icon: 'ads_click', label: 'Convert', desc: 'Personalize every message with dynamic customer data and tags for hyper-relevance.', color: 'bg-brand-teal/40' },
-              { icon: 'monitoring', label: 'Manage', desc: 'Deep-dive into performance analytics and optimize your spend based on actual ROI.', color: 'bg-brand-peach/40' }
+              { icon: 'rocket_launch', label: 'Launch', desc: 'Run engaging SMS, WhatsApp, and SMS with images and videos — with built-in tracking.', color: 'bg-brand-teal/40' },
+              { icon: 'schema', label: 'Automate', desc: 'Follow up automatically using time-based and click-triggered sequences.', color: 'bg-brand-peach/40' },
+              { icon: 'ads_click', label: 'Convert', desc: 'Use AI to generate, nurture, and route replies into real conversions.', color: 'bg-brand-teal/40' },
+              { icon: 'monitoring', label: 'Manage', desc: 'Handle all conversations in one inbox with full visibility and control.', color: 'bg-brand-peach/40' }
             ].map((cap, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[16px] border border-border-gray hover:shadow-xl hover:shadow-primary/5 transition-all">
                 <div className={`size-14 rounded-full ${cap.color} flex items-center justify-center mb-6`}>
