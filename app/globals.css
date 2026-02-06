@@ -275,6 +275,24 @@ body {
   .text-gradient-cyan {
     @apply bg-linear-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent;
   }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  /* Pause marquee on hover */
+  .marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Custom scrollbar styling - sleek and minimal */

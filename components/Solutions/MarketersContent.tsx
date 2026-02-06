@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import CTASection from "../CTASection";
 // import { GoogleGenAI } from "@google/genai";
 
 const MarketersContent: React.FC = () => {
-  const [inputMessage, setInputMessage] = useState('');
-  const [optimizedMessage, setOptimizedMessage] = useState('');
+  const [inputMessage, setInputMessage] = useState("");
+  const [optimizedMessage, setOptimizedMessage] = useState("");
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   // const optimizeMessage = async () => {
@@ -33,66 +34,180 @@ const MarketersContent: React.FC = () => {
   return (
     <div className="bg-white text-deep-navy animate-in fade-in slide-in-from-bottom-4 duration-700">
       {/* Hero Section */}
-      <section className="section-padding pt-12 pb-24 lg:pt-34 lg:pb-32 px-6 bg-white overflow-hidden">
+      <section className="section-padding pt-32 pb-24 lg:pt-40 lg:pb-32 px-6 bg-white overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-8">
+              Marketing Solutions
+            </div>
             <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight text-deep-navy">
-              Turn messaging into a <span className="text-primary">predictable growth</span> channel
+              Turn messaging into a{" "}
+              <span className="text-primary">predictable growth</span> channel
             </h1>
             <p className="mt-8 text-lg text-gray-500 max-w-lg leading-relaxed">
-              Connect with customers on the channels they actually use. SMS, WhatsApp, and RCS automation built for marketing teams.
+              Connect with customers on the channels they actually use. SMS,
+              WhatsApp, and RCS automation built for marketing teams.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <button className="bg-primary text-white h-14 px-8 rounded-full font-bold text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-               Get Started
+                Get Started
               </button>
               <button className="border-2 border-border-gray text-deep-navy h-14 px-8 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
-               Book Demo
+                Book Demo
               </button>
             </div>
           </div>
           <div className="relative">
             <div className="rounded-2xl border border-border-gray bg-gray-50 p-8 lg:p-12 shadow-inner relative z-10 flex items-center justify-center">
               {/* Funnel/Growth Diagram */}
-              <svg className="w-full h-full max-w-sm" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-full h-full max-w-sm"
+                viewBox="0 0 400 300"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 {/* Horizontal Flow Line */}
-                <path d="M40 150H360" stroke="#eeeeee" strokeWidth="2"/>
-                
+                <path d="M40 150H360" stroke="#eeeeee" strokeWidth="2" />
+
                 {/* Nodes with increasing engagement indicators */}
                 {/* Node 1: Awareness */}
                 <g transform="translate(40, 150)">
-                  <circle cx="0" cy="0" r="12" fill="white" stroke="#2db9c8" strokeWidth="2"/>
-                  <rect x="-30" y="25" width="60" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
-                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">REACH</text>
-                  <path d="M-10 -40 L0 -20 L10 -40" stroke="#2db9c8" strokeWidth="1" strokeOpacity="0.3"/>
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="12"
+                    fill="white"
+                    stroke="#2db9c8"
+                    strokeWidth="2"
+                  />
+                  <rect
+                    x="-30"
+                    y="25"
+                    width="60"
+                    height="30"
+                    rx="4"
+                    fill="white"
+                    stroke="#eeeeee"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="0"
+                    y="44"
+                    textAnchor="middle"
+                    fill="#666"
+                    className="text-[8px] font-bold"
+                  >
+                    REACH
+                  </text>
+                  <path
+                    d="M-10 -40 L0 -20 L10 -40"
+                    stroke="#2db9c8"
+                    strokeWidth="1"
+                    strokeOpacity="0.3"
+                  />
                 </g>
-                
+
                 {/* Node 2: Engagement */}
                 <g transform="translate(145, 150)">
-                  <circle cx="0" cy="0" r="16" fill="white" stroke="#2db9c8" strokeWidth="2"/>
-                  <rect x="-35" y="25" width="70" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
-                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">CLICK (15%)</text>
-                  <path d="M-15 -60 L0 -30 L15 -60" stroke="#2db9c8" strokeWidth="2" strokeOpacity="0.5"/>
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="16"
+                    fill="white"
+                    stroke="#2db9c8"
+                    strokeWidth="2"
+                  />
+                  <rect
+                    x="-35"
+                    y="25"
+                    width="70"
+                    height="30"
+                    rx="4"
+                    fill="white"
+                    stroke="#eeeeee"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="0"
+                    y="44"
+                    textAnchor="middle"
+                    fill="#666"
+                    className="text-[8px] font-bold"
+                  >
+                    CLICK (15%)
+                  </text>
+                  <path
+                    d="M-15 -60 L0 -30 L15 -60"
+                    stroke="#2db9c8"
+                    strokeWidth="2"
+                    strokeOpacity="0.5"
+                  />
                 </g>
-                
+
                 {/* Node 3: Conversion */}
                 <g transform="translate(255, 150)">
-                  <circle cx="0" cy="0" r="20" fill="white" stroke="#2db9c8" strokeWidth="2"/>
-                  <rect x="-35" y="25" width="70" height="30" rx="4" fill="white" stroke="#eeeeee" strokeWidth="1"/>
-                  <text x="0" y="44" textAnchor="middle" fill="#666" className="text-[8px] font-bold">CONVERT</text>
-                  <path d="M-20 -80 L0 -40 L20 -80" stroke="#2db9c8" strokeWidth="3"/>
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="20"
+                    fill="white"
+                    stroke="#2db9c8"
+                    strokeWidth="2"
+                  />
+                  <rect
+                    x="-35"
+                    y="25"
+                    width="70"
+                    height="30"
+                    rx="4"
+                    fill="white"
+                    stroke="#eeeeee"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x="0"
+                    y="44"
+                    textAnchor="middle"
+                    fill="#666"
+                    className="text-[8px] font-bold"
+                  >
+                    CONVERT
+                  </text>
+                  <path
+                    d="M-20 -80 L0 -40 L20 -80"
+                    stroke="#2db9c8"
+                    strokeWidth="3"
+                  />
                 </g>
-                
+
                 {/* Growth Curve Line */}
-                <path d="M40 140 C 145 120, 255 60, 360 20" stroke="#2db9c8" strokeWidth="2" strokeLinecap="round" strokeDasharray="4 4"/>
-                <text x="360" y="15" textAnchor="end" fill="#2db9c8" className="text-[10px] font-bold">ROI LIFT</text>
+                <path
+                  d="M40 140 C 145 120, 255 60, 360 20"
+                  stroke="#2db9c8"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeDasharray="4 4"
+                />
+                <text
+                  x="360"
+                  y="15"
+                  textAnchor="end"
+                  fill="#2db9c8"
+                  className="text-[10px] font-bold"
+                >
+                  ROI LIFT
+                </text>
               </svg>
 
               <div className="absolute top-4 right-4 bg-white p-3 rounded-xl shadow-lg border border-border-gray animate-bounce transition-all">
-                <span className="material-symbols-outlined text-primary">sms</span>
+                <span className="material-symbols-outlined text-primary">
+                  sms
+                </span>
               </div>
               <div className="absolute bottom-10 -left-6 bg-white p-3 rounded-xl shadow-lg border border-border-gray">
-                <span className="material-symbols-outlined text-green-500">chat_bubble</span>
+                <span className="material-symbols-outlined text-green-500">
+                  chat_bubble
+                </span>
               </div>
             </div>
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-teal/30 rounded-full blur-3xl -z-0"></div>
@@ -165,22 +280,55 @@ const MarketersContent: React.FC = () => {
       <section className="section-padding pt-24 pb-12 px-6 bg-[#b7f4fb]/10">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16 lg:mb-20">
-            <span className="text-primary font-extrabold uppercase tracking-widest text-xs">Capabilities</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mt-4 text-deep-navy">What Marketers Can Do</h2>
+            <span className="text-primary font-extrabold uppercase tracking-widest text-xs">
+              Capabilities
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mt-4 text-deep-navy">
+              What Marketers Can Do
+            </h2>
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: 'rocket_launch', label: 'Launch', desc: 'Run engaging SMS, WhatsApp, and SMS with images and videos — with built-in tracking.', color: 'bg-brand-teal/40' },
-              { icon: 'schema', label: 'Automate', desc: 'Follow up automatically using time-based and click-triggered sequences.', color: 'bg-brand-peach/40' },
-              { icon: 'ads_click', label: 'Convert', desc: 'Use AI to generate, nurture, and route leads and replies into real conversions.', color: 'bg-brand-teal/40' },
-              { icon: 'monitoring', label: 'Manage', desc: 'Handle all conversations in one inbox with full visibility and control.', color: 'bg-brand-peach/40' }
+              {
+                icon: "rocket_launch",
+                label: "Launch",
+                desc: "Run engaging SMS, WhatsApp, and SMS with images and videos — with built-in tracking.",
+                color: "bg-brand-teal/40",
+              },
+              {
+                icon: "schema",
+                label: "Automate",
+                desc: "Follow up automatically using time-based and click-triggered sequences.",
+                color: "bg-brand-peach/40",
+              },
+              {
+                icon: "ads_click",
+                label: "Convert",
+                desc: "Use AI to generate, nurture, and route leads and replies into real conversions.",
+                color: "bg-brand-teal/40",
+              },
+              {
+                icon: "monitoring",
+                label: "Manage",
+                desc: "Handle all conversations in one inbox with full visibility and control.",
+                color: "bg-brand-peach/40",
+              },
             ].map((cap, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-[16px] border border-border-gray hover:shadow-xl hover:shadow-primary/5 transition-all">
-                <div className={`size-14 rounded-full ${cap.color} flex items-center justify-center mb-6`}>
-                  <span className="material-symbols-outlined text-deep-navy">{cap.icon}</span>
+              <div
+                key={idx}
+                className="bg-white p-8 rounded-[16px] border border-border-gray hover:shadow-xl hover:shadow-primary/5 transition-all"
+              >
+                <div
+                  className={`size-14 rounded-full ${cap.color} flex items-center justify-center mb-6`}
+                >
+                  <span className="material-symbols-outlined text-deep-navy">
+                    {cap.icon}
+                  </span>
                 </div>
                 <h4 className="text-xl font-bold mb-3">{cap.label}</h4>
-                <p className="text-gray-500 text-sm leading-relaxed">{cap.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {cap.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -189,49 +337,76 @@ const MarketersContent: React.FC = () => {
 
       {/* Growth Use Cases */}
       <section className="section-padding pt-24 pb-12 px-6 bg-[#efbdb1]/10">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-300 mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <span className="text-accent-orange font-extrabold uppercase tracking-widest text-xs">Practical Outcomes</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold mt-4 text-deep-navy">Growth Use Cases</h2>
+              <span className="text-accent-orange font-extrabold uppercase tracking-widest text-xs">
+                Practical Outcomes
+              </span>
+              <h2 className="text-4xl md:text-5xl font-extrabold mt-4 text-deep-navy">
+                Growth Use Cases
+              </h2>
             </div>
-            <p className="text-gray-500 max-w-sm">Battle-tested messaging strategies that drive measurable business results.</p>
+            <p className="text-gray-500 max-w-sm">
+              Battle-tested messaging strategies that drive measurable business
+              results.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { 
-                title: 'Lead Generation', 
-                tags: ['SMS', 'WhatsApp'], 
-                img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800', 
-                desc: 'Capture more leads with interactive automated chat flows and instant follow-ups on mobile.'
+              {
+                title: "Lead Generation",
+                tags: ["SMS", "WhatsApp"],
+                img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+                desc: "Capture more leads with interactive automated chat flows and instant follow-ups on mobile.",
               },
-              { 
-                title: 'Flash Sales', 
-                tags: ['RCS', 'Promotions'], 
-                img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-                desc: 'Drive immediate traffic with time-sensitive offers sent through channels with 98% open rates.'
+              {
+                title: "Flash Sales",
+                tags: ["RCS", "Promotions"],
+                img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+                desc: "Drive immediate traffic with time-sensitive offers sent through channels with 98% open rates.",
               },
-              { 
-                title: 'Churn Prevention', 
-                tags: ['Retention', 'Automation'], 
-                img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800',
-                desc: 'Automatically re-engage customers before they drop off with tailored win-back campaigns.'
-              }
+              {
+                title: "Churn Prevention",
+                tags: ["Retention", "Automation"],
+                img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
+                desc: "Automatically re-engage customers before they drop off with tailored win-back campaigns.",
+              },
             ].map((useCase, idx) => (
-              <div key={idx} className="bg-white rounded-[16px] border border-border-gray overflow-hidden group hover:border-primary/30 transition-colors">
+              <div
+                key={idx}
+                className="bg-white rounded-[16px] border border-border-gray overflow-hidden group hover:border-primary/30 transition-colors"
+              >
                 <div className="aspect-video overflow-hidden">
-                  <img alt={useCase.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={useCase.img} />
+                  <img
+                    alt={useCase.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src={useCase.img}
+                  />
                 </div>
                 <div className="p-8">
                   <div className="flex gap-2 mb-4">
-                    {useCase.tags.map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded">{tag}</span>
+                    {useCase.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded"
+                      >
+                        {tag}
+                      </span>
                     ))}
                   </div>
                   <h4 className="text-xl font-bold mb-3">{useCase.title}</h4>
-                  <p className="text-gray-500 text-sm mb-6 leading-relaxed">{useCase.desc}</p>
-                  <a className="inline-flex items-center gap-2 text-primary font-bold text-sm" href="#">
-                    Learn more <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                    {useCase.desc}
+                  </p>
+                  <a
+                    className="inline-flex items-center gap-2 text-primary font-bold text-sm"
+                    href="#"
+                  >
+                    Learn more{" "}
+                    <span className="material-symbols-outlined text-sm">
+                      arrow_forward
+                    </span>
                   </a>
                 </div>
               </div>
@@ -242,23 +417,29 @@ const MarketersContent: React.FC = () => {
 
       {/* Testimonial Section */}
       <section className="section-padding pt-24 pb-12 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto text-center">
+        <div className="max-w-200 mx-auto text-center">
           <div className="flex justify-center mb-10">
-            <span className="material-symbols-outlined text-5xl text-primary/30">format_quote</span>
+            <span className="material-symbols-outlined text-5xl text-primary/30">
+              format_quote
+            </span>
           </div>
           <blockquote className="text-3xl md:text-4xl font-semibold text-deep-navy leading-[1.4] mb-12">
-            "Tracksend has completely changed how we think about customer outreach. Our SMS and WhatsApp engagement rates are 10x higher than email"
+            "Tracksend has completely changed how we think about customer
+            outreach. Our SMS and WhatsApp engagement rates are 10x higher than
+            email"
           </blockquote>
           <div className="flex flex-col items-center">
-            <div className="size-16 rounded-full overflow-hidden mb-4 border-2 border-primary/20 p-1">
-              <img 
-                alt="Oke" 
-                className="w-full h-full object-cover rounded-full" 
+            {/* <div className="size-16 rounded-full overflow-hidden mb-4 border-2 border-primary/20 p-1">
+              <img
+                alt="Oke"
+                className="w-full h-full object-cover rounded-full"
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
               />
-            </div>
+            </div> */}
             <p className="font-bold text-lg text-deep-navy"></p>
-            <p className="text-gray-500 text-sm">Head of Growth, SooyaBristo.</p>
+            <p className="text-gray-500 text-sm">
+              Head of Growth, SooyaBristo.
+            </p>
           </div>
         </div>
       </section>
@@ -266,24 +447,32 @@ const MarketersContent: React.FC = () => {
       {/* Integration Path */}
       <section className="section-padding pt-24 pb-12 px-6 border-t border-border-gray bg-gray-50/50">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h2 className="text-3xl font-bold text-deep-navy mb-16">Integrated with your favorite tools</h2>
+          <h2 className="text-3xl font-bold text-deep-navy mb-16">
+            Integrated with your favorite tools
+          </h2>
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
             {[
-              { label: 'Customer.io', icon: 'hub' },
-              { label: 'Mailchimp', icon: 'mail' },
-              { label: 'WooCommerce', icon: 'shopping_bag' },
-              { label: 'Freshdesk', icon: 'support_agent' }
+              { label: "Customer.io", icon: "hub" },
+              { label: "Mailchimp", icon: "mail" },
+              { label: "WooCommerce", icon: "shopping_bag" },
+              { label: "Freshdesk", icon: "support_agent" },
             ].map((tool, idx, arr) => (
               <React.Fragment key={idx}>
                 <div className="flex flex-col items-center gap-3 group">
                   <div className="size-16 md:size-20 bg-white rounded-full flex items-center justify-center border border-border-gray shadow-sm group-hover:border-primary/50 transition-colors">
-                    <span className="material-symbols-outlined text-primary text-3xl md:text-4xl">{tool.icon}</span>
+                    <span className="material-symbols-outlined text-primary text-3xl md:text-4xl">
+                      {tool.icon}
+                    </span>
                   </div>
-                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-400">{tool.label}</span>
+                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-gray-400">
+                    {tool.label}
+                  </span>
                 </div>
                 {idx < arr.length - 1 && (
                   <div className="hidden lg:flex items-center text-gray-200">
-                    <span className="material-symbols-outlined text-4xl">trending_flat</span>
+                    <span className="material-symbols-outlined text-4xl">
+                      trending_flat
+                    </span>
                   </div>
                 )}
               </React.Fragment>
@@ -291,46 +480,9 @@ const MarketersContent: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <footer className="bg-navy-dark text-white pt-24 pb-12 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-8">Scale your growth with Tracksend</h2>
-            <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
-              Join 500+ top-tier marketers who are automating their conversations and seeing real revenue growth.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-primary text-white h-14 px-10 rounded-full font-bold text-lg hover:opacity-90 transition-opacity">
-                Get Started
-              </button>
-              <button className="bg-white/10 text-white h-14 px-10 rounded-full font-bold text-lg hover:bg-white/20 transition-colors">
-                Book a demo
-              </button>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-3">
-              <div className="size-8 text-primary">
-                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <path clipRule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fillRule="evenodd"></path>
-                </svg>
-              </div>
-              <h2 className="text-xl font-bold tracking-tight">Tracksend</h2>
-            </div>
-            <div className="flex gap-8 text-sm text-white/50 font-medium">
-              <a className="hover:text-white transition-colors" href="#">Privacy Policy</a>
-              <a className="hover:text-white transition-colors" href="#">Terms of Service</a>
-              <a className="hover:text-white transition-colors" href="#">Careers</a>
-              <a className="hover:text-white transition-colors" href="#">Contact</a>
-            </div>
-            <p className="text-sm text-white/30">© 2026 Tracksend Inc. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <CTASection />
     </div>
   );
 };
 
 export default MarketersContent;
-

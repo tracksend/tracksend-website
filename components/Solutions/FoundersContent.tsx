@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
+import CTASection from "../CTASection";
 
 const FoundersContent: React.FC = () => {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-24 lg:pt-34 lg:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-8">
               Built for early-stage & growth
             </div>
-            <h1 className="text-5xl lg:text-5xl font-extrabold leading-[1.05] tracking-tight text-slate-900 mb-8 font-display">
+            <h1 className="text-4xl lg:text-5xl font-extrabold leading-[1.05] tracking-tight text-slate-900 mb-8 font-display">
               Scale your startup with{" "}
               <span className="text-primary">automated</span> engagement
             </h1>
@@ -231,6 +232,7 @@ const FoundersContent: React.FC = () => {
           </div>
         </div>
       </section>
+      <CTASection />
     </div>
   );
 };

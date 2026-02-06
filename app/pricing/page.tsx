@@ -184,3 +184,21 @@ export default async function PricingPage() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Pricing - Tracksend",
+  description:
+    "Transparent pricing for SMS, WhatsApp, and RCS. Pay-as-you-go messaging with developer-friendly APIs and predictable billing.",
+  openGraph: {
+    title: "Pricing - Tracksend",
+    description:
+      "Transparent pricing for SMS, WhatsApp, and RCS. Pay-as-you-go messaging with developer-friendly APIs and predictable billing.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Pricing - Tracksend",
+    description:
+      "Transparent pricing for SMS, WhatsApp, and RCS. Pay-as-you-go messaging with developer-friendly APIs and predictable billing.",
+  },
+};

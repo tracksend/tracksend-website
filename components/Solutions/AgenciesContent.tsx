@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
+import CTASection from "../CTASection";
 
 const AgenciesContent: React.FC = () => {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
       {/* <div className="animate-in fade-in duration-700"> */}
       {/* Hero */}
-      <section className="relative pt-12 pb-24 lg:pt-34 lg:pb-32 overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 h-full w-1/3 bg-linear-to-l from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6 lg:gap-8">
@@ -221,7 +222,8 @@ const AgenciesContent: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-navy-dark relative overflow-hidden">
+      <CTASection />
+      {/* <section className="py-24 bg-navy-dark relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle,white_0%,transparent_70%)] opacity-20"></div>
         </div>
@@ -245,7 +247,7 @@ const AgenciesContent: React.FC = () => {
             No credit card required for partner sandbox.
           </p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
