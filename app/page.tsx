@@ -868,7 +868,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-pattern-cyan opacity-5 pointer-events-none"></div>
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
-                Ready to turn SMS and WhatsApp into a growth engine??
+                Ready to turn messaging into a growth engine?
               </h2>
               <p className="text-xl text-gray-300 mb-12 font-medium">
                 Join 2,000+ businesses using Tracksend to scale their engagement
