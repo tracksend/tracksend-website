@@ -23,7 +23,7 @@ const ProductManagersContent: React.FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">Start Free</button>
+                <button className="px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">Get Started</button>
                 <button className="px-8 py-4 border border-gray-200 text-brand-navy font-bold rounded-full hover:bg-gray-50 transition-all">Book Demo</button>
               </div>
             </div>
@@ -282,7 +282,7 @@ const ProductManagersContent: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-extrabold text-brand-navy tracking-tighter">Ready to upgrade your product messaging?</h2>
             <p className="text-xl text-gray-500">Join 500+ product teams delivering modern communication experiences at scale.</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-              <button className="px-10 py-5 bg-primary text-white font-extrabold rounded-full text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all">Get Started Free</button>
+              <button className="px-10 py-5 bg-primary text-white font-extrabold rounded-full text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all">Get Started</button>
               <button className="px-10 py-5 border border-gray-200 text-brand-navy font-extrabold rounded-full text-lg hover:bg-gray-50 transition-all">Talk to Sales</button>
             </div>
           </div>
