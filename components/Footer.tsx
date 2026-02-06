@@ -23,8 +23,8 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 text-sm max-w-xs mb-8">
-              Building the future of human-centric B2B communications. Let's
-              grow together.
+              Helping B2C brands grow with SMS and WhatsApp
+              — from first message to conversion.
             </p>
           </div>
           <div>
@@ -34,12 +34,17 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-gray-400">
               <li>
                 <a className="hover:text-primary transition-colors" href="#">
-                  Messaging API
+                 Campaigns
                 </a>
               </li>
               <li>
                 <a className="hover:text-primary transition-colors" href="#">
-                  WhatsApp Flows
+                  Inbox
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-primary transition-colors" href="#">
+                  AI Chatbot
                 </a>
               </li>
               <li>
@@ -47,7 +52,7 @@ const Footer: React.FC = () => {
                   className="hover:text-primary transition-colors"
                   href="/pricing"
                 >
-                  Pricing
+                 Pricing
                 </Link>
               </li>
             </ul>
@@ -58,17 +63,17 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-4 text-sm text-gray-400">
               <li>
-                <a className="hover:text-primary transition-colors" href="#">
+                <a className="hover:text-primary transition-colors" href="https://tracksend.readme.io/reference/overview">
                   API Docs
                 </a>
               </li>
               <li>
-                <a className="hover:text-primary transition-colors" href="#">
+                <a className="hover:text-primary transition-colors" href="https://tracksend.readme.io/reference/overview">
                   SDKs & Libraries
                 </a>
               </li>
               <li>
-                <a className="hover:text-primary transition-colors" href="#">
+                <a className="hover:text-primary transition-colors" href="https://tracksend.readme.io/reference/overview">
                   System Status
                 </a>
               </li>
@@ -80,18 +85,18 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-4 text-sm text-gray-400">
               <li>
-                <a className="hover:text-primary transition-colors" href="#">
-                  Our Story
+                <a className="hover:text-primary transition-colors" href="https://www.linkedin.com/company/tracksend/">
+                  About
                 </a>
               </li>
               <li>
                 <a className="hover:text-primary transition-colors" href="#">
-                  Careers
+                  Terms
                 </a>
               </li>
               <li>
                 <a className="hover:text-primary transition-colors" href="#">
-                  Contact
+                  Privacy
                 </a>
               </li>
             </ul>
