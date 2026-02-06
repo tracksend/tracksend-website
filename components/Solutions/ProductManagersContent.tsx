@@ -90,8 +90,8 @@ const ProductManagersContent: React.FC = () => {
         <div className="max-w-[1280px] mx-auto pt-24 pb-12 px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
             <div className="flex-1 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">Build product messaging users actually notice</h2>
-              <p className="text-lg text-gray-600 max-w-lg">Send transactional alerts, lifecycle nudges, and rich notifications across SMS, WhatsApp, and RCS and handle replies without building everything from scratch.</p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">One messaging layer for your product</h2>
+              <p className="text-lg text-gray-600 max-w-lg">Move faster by centralizing templates, logic, and delivery — while your product focuses on shipping features, not notifications.</p>
               <div className="grid gap-6 pt-4">
                 <div className="flex gap-5 items-start">
                   <div className="size-10 shrink-0 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
@@ -118,7 +118,7 @@ const ProductManagersContent: React.FC = () => {
                 <div className="space-y-8">
                   <div className="flex justify-between items-end">
                     <h4 className="font-bold text-sm uppercase tracking-widest text-gray-400">Implementation Efficiency</h4>
-                    <span className="text-3xl lg:text-4xl font-extrabold text-primary">85%</span>
+                    <span className="text-3xl lg:text-4xl font-extrabold text-primary">95%</span>
                   </div>
                   <div className="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
                     <div className="h-full bg-primary w-[85%]"></div>
