@@ -276,15 +276,13 @@ export default function HomeClient() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-700/10 mb-4">
-                  CX
+                 Product & CX
                 </span>
                 <h4 className="text-lg font-bold text-navy-dark mb-2">
                   Renewals & Retention
                 </h4>
                 <p className="text-text-main/80 text-sm leading-relaxed mb-6">
-                  Automate renewal reminders and provide sales support via
-                  WhatsApp.
-                </p>
+                  Automate renewal reminders and engaged customer with notifcations
                 <a
                   className="text-orange-600 font-bold text-sm flex items-center hover:gap-2 transition-all"
                   href="/solutions/product-managers"
