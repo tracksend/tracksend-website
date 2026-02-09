@@ -23,7 +23,7 @@ export default function HomeClient() {
     },
     {
       title: "Convert replies",
-      desc: "Use AI to qualify inbound leads and handle simple replies automatically.",
+      desc: "Use AI to qualify inbound leads and handle orders at scale.",
       icon: "forum",
       colorClass: "bg-secondary",
       bgClass: "bg-white border-gray-100",
