@@ -14,6 +14,9 @@ export const metadata = {
   },
   keywords: [
     "agency solutions",
+    "sms",
+    "rcs",
+    "whatsapp",
     "campaign management",
     "multi-channel messaging",
     "client management",
