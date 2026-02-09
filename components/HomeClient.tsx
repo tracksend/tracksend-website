@@ -97,7 +97,7 @@ export default function HomeClient() {
       <section className="bg-white py-16 relative overflow-hidden border-y border-gray-100 marquee-container">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10 mb-10 text-center">
           <h2 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">
-            Trusted by the world's most innovative teams
+            Trusted by the world's most innovative brands
           </h2>
         </div>
 
