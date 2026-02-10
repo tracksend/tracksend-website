@@ -28,10 +28,13 @@ const ProductManagersContent: React.FC = () => {
               </div>
               <div className="flex flex-wrap gap-4">
                 <button className="px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">
-                  Get Started
+                  <a href="https://app.tracksend.co/register">Get Started</a>
                 </button>
                 <button className="px-8 py-4 border border-gray-200 text-brand-navy font-bold rounded-full hover:bg-gray-50 transition-all">
-                  Book Demo
+                  <a href="https://tracksend.as.me/schedule/9cf8d404">
+                    Book Demo
+                  </a>
+                  <a href="https://app.tracksend.co/register">Book Demo</a>
                 </button>
               </div>
             </div>

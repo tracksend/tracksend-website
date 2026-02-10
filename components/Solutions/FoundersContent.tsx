@@ -19,14 +19,17 @@ const FoundersContent: React.FC = () => {
             </h1>
             <p className="text-l text-slate-500 leading-relaxed mb-10 max-w-lg">
               The messaging infrastructure that helps founders automate sales,
-              generate leads, and support customers without increasing headcount.
+              generate leads, and support customers without increasing
+              headcount.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="px-10 py-5 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-1 transition-all text-lg">
-                Get Started
+                <a href="https://app.tracksend.co/register">Get Started</a>
               </button>
               <button className="px-10 py-5 border-2 border-slate-100 text-slate-900 font-bold rounded-2xl hover:bg-slate-50 transition-all text-lg">
-                Book Demo
+                <a href="https://tracksend.as.me/schedule/9cf8d404">
+                  Book Demo
+                </a>
               </button>
             </div>
           </div>

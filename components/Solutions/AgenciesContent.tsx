@@ -28,11 +28,15 @@ const AgenciesContent: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <button className="h-14 px-8 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/25 hover:scale-[1.02] transition-all flex items-center gap-2">
-                Partner with Tracksend{" "}
+                <a href="https://app.tracksend.co/register">
+                  Partner with Tracksend{" "}
+                </a>
                 <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <button className="h-14 px-8 rounded-xl border border-slate-200 text-slate-900 font-bold text-lg hover:bg-slate-50 transition-all flex items-center gap-2">
-                Book a demo{" "}
+                <a href="https://tracksend.as.me/schedule/9cf8d404">
+                  Book a demo{" "}
+                </a>
                 <span className="material-symbols-outlined">
                   calendar_today
                 </span>

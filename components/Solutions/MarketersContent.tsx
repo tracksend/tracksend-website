@@ -50,10 +50,12 @@ const MarketersContent: React.FC = () => {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <button className="bg-primary text-white h-14 px-8 rounded-full font-bold text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                Get Started
+                <a href="https://app.tracksend.co/register">Get Started</a>
               </button>
               <button className="border-2 border-border-gray text-deep-navy h-14 px-8 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
-                Book Demo
+                <a href="https://tracksend.as.me/schedule/9cf8d404">
+                  Book Demo
+                </a>
               </button>
             </div>
           </div>
