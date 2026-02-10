@@ -57,7 +57,7 @@ export function CampaignEditor({
       {/* Editor Area */}
       <div className="flex items-center justify-between mb-2">
         <h2 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
-          Campaign Template
+          Campaign Playground (Type a message in the box)
         </h2>
         {/* <button className="flex items-center gap-1 text-cyan-500 hover:text-cyan-600 transition-colors text-xs font-bold">
           <Sparkles size={14} />
