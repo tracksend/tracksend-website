@@ -84,7 +84,7 @@ export default function HomeClient() {
             <p className="text-lg text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8">
               Send SMS, rich SMS with images and videos, and WhatsApp messages
               with engagement tracking, automated follow-ups, and AI-driven
-              replies — all from one simple platform
+              replies
             </p>
           </div>
           <div className="mx-auto w-full max-w-5xl">
