@@ -52,8 +52,8 @@ export const messageChargesPerCountry: Record<
   }
 > = {
   "united states": {
-    sms: "$0.06",
-    rcs: "$0.06",
+    sms: "$0.006",
+    rcs: "$0.006",
     whatsapp: "$0.006",
   },
   "united kingdom": {
@@ -68,7 +68,7 @@ export const messageChargesPerCountry: Record<
   },
   ghana: {
     sms: "₵2.5",
-    rcs: "₵5",
+    rcs: "Not enabled",
     whatsapp: "₵2.5",
   },
   "south africa": {
@@ -86,15 +86,15 @@ export const planTemplates = {
   growth: {
     id: "growth",
     name: "Growth",
-    credits: 450,
+    credits: 45,
     description:
-      "Perfect for growing startups needing reliable messaging channels.",
+      "Best for teams running campaigns and automated follow-ups.",
     features: [
-      "Up to 5 seats",
-      "Unlimited campaigns",
-      "Advanced segments",
-      "Basic automations",
-      "Standard support",
+      "Multi Channel",
+      "Unlimited Campaigns",
+      "Smart follow-ups",
+      "Integrations + webhooks",
+      "AI Basics",
     ],
     buttonText: "Get Growth",
     isPopular: false,
@@ -102,14 +102,14 @@ export const planTemplates = {
   scale: {
     id: "scale",
     name: "Scale",
-    credits: 850,
+    credits: 85,
     description:
-      "For teams that need full power, advanced bots, and priority care.",
+      "Best for teams that need two-way messaging and conversion workflows.",
     features: [
-      "Up to 10 seats",
-      "Conversation Inbox (full)",
-      "Advanced automations + sequences",
-      "Bots",
+      "Everything in Growth",
+      "Conversation Inbox",
+      "AI Chatbots",
+      "Dynamic Segments ",
       "Priority support",
     ],
     buttonText: "Get Scale",
@@ -120,13 +120,14 @@ export const planTemplates = {
     name: "Enterprise",
     credits: 0,
     description:
-      "Tailored solutions for high-volume senders and large organizations.",
+      "Tailored solutions for high-volume senders and custom needs."
     features: [
-      "Custom seats",
-      "Dedicated success manager",
+      "SLA Support",
       "Volume-based pricing",
       "Custom integrations",
-      "Invoicing",
+      "High throughput",
+      "Dedicated success manager",
+     
     ],
     buttonText: "Contact Sales",
     isPopular: false,
