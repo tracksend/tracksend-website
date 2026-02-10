@@ -207,14 +207,14 @@ const AgenciesContent: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
             <TestimonialCard
               quote="Before Tracksend, we struggled to prove ROI. Now, it's our most profitable service line. The attribution is flawless."
-              name="Mark Davis"
-              role="Founder, AdVantage"
+              name=""
+              role="Founder, Digiphoria"
               img="https://picsum.photos/seed/mark/100/100"
             />
             <TestimonialCard
               quote="The RCS features are a game changer. Being able to send carousels directly to phones has doubled our CTRs."
-              name="Elena Rodriguez"
-              role="Head of CRM, PixelPerfect"
+              name=""
+              role="Strategy Lead, SD1 Agency"
               img="https://picsum.photos/seed/elena/100/100"
             />
           </div>
