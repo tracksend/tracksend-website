@@ -120,7 +120,7 @@ export const planTemplates = {
     name: "Enterprise",
     credits: 0,
     description:
-      "Tailored solutions for high-volume senders and custom needs."
+      "Tailored solutions for high-volume senders and custom needs.",
     features: [
       "SLA Support",
       "Volume-based pricing",
