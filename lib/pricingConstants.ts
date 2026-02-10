@@ -17,24 +17,24 @@ export const basePrices: Record<
   }
 > = {
   "united states": {
-    growth: { monthly: 40, annual: 400 },
-    scale: { monthly: 120, annual: 1200 },
-  },
-  "united kingdom": {
-    growth: { monthly: 30, annual: 300 },
+    growth: { monthly: 60, annual: 600 },
     scale: { monthly: 100, annual: 1000 },
   },
+  "united kingdom": {
+    growth: { monthly: 50, annual: 500 },
+    scale: { monthly: 80, annual: 800 },
+  },
   nigeria: {
-    growth: { monthly: "30k", annual: "300k" },
-    scale: { monthly: "80k", annual: "800k" },
+    growth: { monthly: "80k", annual: "800k" },
+    scale: { monthly: "150k", annual: "1.5M" },
   },
   ghana: {
     growth: { monthly: 250, annual: 2500 },
     scale: { monthly: 700, annual: 7000 },
   },
   "south africa": {
-    growth: { monthly: 500, annual: "5k" },
-    scale: { monthly: 1500, annual: "15k" },
+    growth: { monthly: 1000, annual: "10k" },
+    scale: { monthly: 2000, annual: "20k" },
   },
 };
 
@@ -54,27 +54,27 @@ export const messageChargesPerCountry: Record<
   "united states": {
     sms: "$0.006",
     rcs: "$0.006",
-    whatsapp: "$0.006",
+    whatsapp: "$0.003",
   },
   "united kingdom": {
     sms: "£0.032",
     rcs: "£0.040",
-    whatsapp: "£0.005",
+    whatsapp: "£0.0025",
   },
   nigeria: {
     sms: "₦5.50",
     rcs: "₦5",
-    whatsapp: "₦1.50",
+    whatsapp: "₦2.50",
   },
   ghana: {
     sms: "₵2.5",
     rcs: "Not enabled",
-    whatsapp: "₵2.5",
+    whatsapp: "₵3.5",
   },
   "south africa": {
     sms: "R0.25",
     rcs: "R0.35",
-    whatsapp: "R0.015",
+    whatsapp: "R0.3",
   },
 };
 
