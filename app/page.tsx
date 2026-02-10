@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tracksend — Turn SMS and WhatsApp into growth channels"",
+    title: "Tracksend — Turn SMS and WhatsApp into growth channels",
     description:
       "Turn every SMS & WhatsApp message into a sales engine—AI-optimized, multimedia SMS & proven ROI.",
     site: "@tracksend",
