@@ -62,7 +62,7 @@ export default function PricingContent({
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         <div className="max-w-240 mx-auto flex flex-col items-center gap-8 relative z-10 text-center">
           <h1 className="text-navy-dark text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-            One monthly plan + included credits.{" "}
+            Simple plans + included credits.{" "}
             <br className="hidden md:block" /> Clear rates in every country.
           </h1>
           <p className="text-navy-dark/70 text-lg font-medium max-w-2xl">
