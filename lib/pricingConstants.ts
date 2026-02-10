@@ -88,11 +88,11 @@ export const planTemplates = {
     name: "Growth",
     credits: 45,
     description:
-      "Best for teams running campaigns and automated follow-ups.",
+      "Best for businesses running campaigns and need insights.",
     features: [
-      "Multi Channel",
+      "Multi-Channel",
       "Unlimited Campaigns",
-      "Smart follow-ups",
+      "Dynamic Segments",
       "Integrations + webhooks",
       "AI Basics",
     ],
@@ -104,12 +104,12 @@ export const planTemplates = {
     name: "Scale",
     credits: 85,
     description:
-      "Best for teams that need two-way messaging and conversion workflows.",
+      "Best for businesses that need two-way messaging and conversion automation.",
     features: [
       "Everything in Growth",
       "Conversation Inbox",
       "AI Chatbots",
-      "Dynamic Segments ",
+      "Smart Follow-ups",
       "Priority support",
     ],
     buttonText: "Get Scale",
