@@ -19,7 +19,7 @@ const CTASection: React.FC = () => {
                 <a href="/pricing">Get Started</a>
               </button>
               <button className="px-10 py-4 bg-white/10 text-white rounded-2xl font-black text-lg border border-white/20 hover:bg-white/20 transition-all">
-                <a href="https://tracksend.as.me/schedule/9cf8d404">
+                <a href="https://cal.com/tracksend-discover/tdc">
                   Book a demo
                 </a>
               </button>
