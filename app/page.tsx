@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Tracksend",
     images: [
       {
-        url: "https://tracksend.co/og-image.png",
+        url: "https://tracksend.co/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Tracksend — messaging growth platform",
