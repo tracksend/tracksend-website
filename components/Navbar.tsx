@@ -21,8 +21,6 @@ const Navbar: React.FC = () => {
   const isLanding = pathname === "/";
   const isActive = (path: string) => pathname === path;
 
-  console.log({ pathname });
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -55,13 +53,13 @@ const Navbar: React.FC = () => {
           {isLanding && !isScrolled ? (
             <img
               alt="Hero Background"
-              className="h-auto w-40 object-fit"
+              className="h-auto w-35 md:w-40 object-fit"
               src="/tracksendlogowhite.png"
             />
           ) : (
             <img
               alt="Hero Background"
-              className="h-auto w-40 object-fit"
+              className="h-auto w-35 md:w-40 object-fit"
               src="/tracksendlogo.png"
             />
           )}
@@ -161,7 +159,7 @@ const Navbar: React.FC = () => {
                 <div className="px-6 py-6 border-b">
                   <img
                     alt="Tracksend Logo"
-                    className="h-auto w-40"
+                    className="h-auto w-35 md:w-40 object-fit"
                     src="/tracksendlogo.png"
                   />
                 </div>
