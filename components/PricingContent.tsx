@@ -2,7 +2,11 @@
 
 import React, { useState } from "react";
 import { getCurrencySymbol } from "@/lib/geolocation";
-import { getRegisterUrl } from "@/lib/pricingConstants";
+import {
+  getRegisterUrl,
+  getFormattedPlanCredits,
+  getRawPlanCredits,
+} from "@/lib/pricingConstants";
 
 interface LocationData {
   countryCode: string;
@@ -38,6 +42,13 @@ export default function PricingContent({
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
       link: getRegisterUrl(location.countryCode, "growth", billingCycle),
+      credits: getRawPlanCredits(location.countryCode, "growth", billingCycle),
+      formattedCredits: getFormattedPlanCredits(
+        location.countryCode,
+        "growth",
+        billingCycle,
+        location.currency,
+      ),
     },
     {
       ...planTemplates.scale,
@@ -48,6 +59,13 @@ export default function PricingContent({
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
       link: getRegisterUrl(location.countryCode, "scale", billingCycle),
+      credits: getRawPlanCredits(location.countryCode, "scale", billingCycle),
+      formattedCredits: getFormattedPlanCredits(
+        location.countryCode,
+        "scale",
+        billingCycle,
+        location.currency,
+      ),
     },
     {
       ...planTemplates.enterprise,
@@ -102,7 +120,7 @@ export default function PricingContent({
               >
                 Annual{" "}
                 <span className="text-[10px] text-primary ml-1 font-bold">
-                  -10%
+                  -15%
                 </span>
               </button>
             </div>
@@ -145,22 +163,24 @@ export default function PricingContent({
                 </div>
                 {plan.credits > 0 && (
                   <p className="text-secondary text-sm font-bold mt-2">
-                    Includes {plan.credits * 1000} credits
+                    Includes {plan.formattedCredits} credits
                   </p>
                 )}
                 <p className="text-gray-500 text-sm mt-4 leading-relaxed">
                   {plan.description}
                 </p>
               </div>
-              <button
-                className={`w-full h-12 rounded-xl font-bold text-sm transition-all mb-8 ${
-                  plan.isPopular
-                    ? "bg-secondary text-white hover:shadow-glow-cyan"
-                    : "bg-gray-100 text-navy-dark hover:bg-gray-200"
-                }`}
-              >
-                <a href={plan.link || "#"}>{plan.buttonText}</a>
-              </button>
+              <a href={plan.link || "#"} target="_blank">
+                <button
+                  className={`w-full h-12 rounded-xl font-bold text-sm transition-all mb-8 ${
+                    plan.isPopular
+                      ? "bg-secondary text-white hover:shadow-glow-cyan"
+                      : "bg-gray-100 text-navy-dark hover:bg-gray-200"
+                  }`}
+                >
+                  {plan.buttonText}
+                </button>
+              </a>
               <div className="space-y-4 mt-auto">
                 {plan.features.map((feature: string, idx: number) => (
                   <div

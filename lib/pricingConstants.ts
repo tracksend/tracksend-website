@@ -199,3 +199,61 @@ export function getRegisterUrl(
   if (planId === "enterprise") return "https://cal.com/tracksend-discover/tdc";
   return `https://app.tracksend.co/register?pin=8&platform=${platform}`;
 }
+
+// Credits per country, plan and billing cycle (actual credit counts).
+// Keys are ISO country codes (uppercase). Numbers are total credits included
+// for the given plan and billing cycle. Update these values to match real
+// product settings as needed.
+export const planCredits: Record<
+  string,
+  {
+    growth: { monthly: number; annual: number };
+    scale: { monthly: number; annual: number };
+  }
+> = {
+  US: { growth: { monthly: 45000, annual: 540000 }, scale: { monthly: 85000, annual: 1020000 } },
+  GB: { growth: { monthly: 45000, annual: 540000 }, scale: { monthly: 85000, annual: 1020000 } },
+  NG: { growth: { monthly: 80000, annual: 960000 }, scale: { monthly: 150000, annual: 1800000 } },
+  GH: { growth: { monthly: 25000, annual: 300000 }, scale: { monthly: 70000, annual: 840000 } },
+  ZA: { growth: { monthly: 100000, annual: 1200000 }, scale: { monthly: 200000, annual: 2400000 } },
+};
+
+planCredits.default = planCredits.US;
+
+// Return raw credits (number) for a given country/plan/billing. Falls back
+// to `planTemplates` values multiplied by 1000 if no mapping exists.
+export function getRawPlanCredits(
+  countryCode: string | undefined,
+  planId: "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+): number {
+  if (planId === "enterprise") return 0;
+  const key = countryCode ? countryCode.toUpperCase() : "US";
+  const mapping = planCredits[key] || planCredits["US"];
+  const raw = mapping?.[planId]?.[billing];
+  if (typeof raw === "number") return raw;
+  // fallback to template (template `credits` represents thousands)
+  const templateBase = (planTemplates as any)[planId]?.credits || 0;
+  return templateBase * 1000;
+}
+
+// Format number with commas and prefix with currency symbol when available.
+export function formatCreditsWithCurrency(
+  amount: number,
+  currencyCode?: string,
+): string {
+  const formatted = new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 }).format(amount);
+  const symbol = currencyCode ? (currencySymbols[currencyCode] || "") : "";
+  return `${symbol}${formatted}`;
+}
+
+// High-level helper: returns the formatted credits string for display.
+export function getFormattedPlanCredits(
+  countryCode: string | undefined,
+  planId: "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+  currencyCode?: string,
+): string {
+  const raw = getRawPlanCredits(countryCode, planId, billing);
+  return formatCreditsWithCurrency(raw, currencyCode);
+}
