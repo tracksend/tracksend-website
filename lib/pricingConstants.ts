@@ -21,20 +21,20 @@ export const basePrices: Record<
     scale: { monthly: 100, annual: 1000 },
   },
   "united kingdom": {
-    growth: { monthly: 50, annual: 500 },
-    scale: { monthly: 80, annual: 800 },
+    growth: { monthly: 60, annual: 600 },
+    scale: { monthly: 100, annual: 1000 },
   },
   nigeria: {
     growth: { monthly: "80k", annual: "800k" },
     scale: { monthly: "150k", annual: "1.5M" },
   },
   ghana: {
-    growth: { monthly: 250, annual: 2500 },
-    scale: { monthly: 700, annual: 7000 },
+    growth: { monthly: 750, annual: "7.5k" },
+    scale: { monthly: 1400, annual: "14k" },
   },
   "south africa": {
-    growth: { monthly: 1000, annual: "10k" },
-    scale: { monthly: 2000, annual: "20k" },
+    growth: { monthly: 750, annual: "7.5" },
+    scale: { monthly: 1400, annual: "14k" },
   },
 };
 
@@ -211,11 +211,11 @@ export const planCredits: Record<
     scale: { monthly: number; annual: number };
   }
 > = {
-  US: { growth: { monthly: 25, annual: 250 }, scale: { monthly: 80, annual: 800 } },
+  US: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
   GB: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
   NG: { growth: { monthly: 45000, annual: 450000 }, scale: { monthly: 85000, annual: 850000 } },
-  GH: { growth: { monthly: 350, annual: 3500 }, scale: { monthly: 700, annual: 70000 } },
-  ZA: { growth: { monthly: 500, annual: 5000 }, scale: { monthly: 1000, annual: 10000 } },
+  GH: { growth: { monthly: 400, annual: 4000 }, scale: { monthly: 800, annual: 8000 } },
+  ZA: { growth: { monthly: 400, annual: 4000 }, scale: { monthly: 800, annual: 8000 } },
 };
 
 planCredits.default = planCredits.US;
