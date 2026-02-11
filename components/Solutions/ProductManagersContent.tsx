@@ -31,10 +31,7 @@ const ProductManagersContent: React.FC = () => {
                   <a href="https://app.tracksend.co/register">Get Started</a>
                 </button>
                 <button className="px-8 py-4 border border-gray-200 text-brand-navy font-bold rounded-full hover:bg-gray-50 transition-all">
-                  <a href="https://tracksend.as.me/schedule/9cf8d404">
-                    Book Demo
-                  </a>
-                  <a href="https://app.tracksend.co/register">Book Demo</a>
+                  <a href="https://cal.com/tracksend-discover/tdc">Book Demo</a>
                 </button>
               </div>
             </div>

@@ -34,7 +34,7 @@ const AgenciesContent: React.FC = () => {
                 <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <button className="h-14 px-8 rounded-xl border border-slate-200 text-slate-900 font-bold text-lg hover:bg-slate-50 transition-all flex items-center gap-2">
-                <a href="https://tracksend.as.me/schedule/9cf8d404">
+                <a href="https://cal.com/tracksend-discover/tdc">
                   Book a demo{" "}
                 </a>
                 <span className="material-symbols-outlined">

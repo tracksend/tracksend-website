@@ -119,17 +119,83 @@ export const planTemplates = {
     id: "enterprise",
     name: "Enterprise",
     credits: 0,
-    description:
-      "Tailored solutions for high-volume senders and custom needs.",
+    description: "Tailored solutions for high-volume senders and custom needs.",
     features: [
       "SLA Support",
       "Volume-based pricing",
       "Custom integrations",
       "High throughput",
       "Dedicated success manager",
-     
     ],
     buttonText: "Contact Sales",
     isPopular: false,
   },
 };
+
+// Mapping of pins used in the register URL per country, plan and billing cycle.
+// Keys are ISO country codes (uppercase). Pins are strings to allow non-numeric
+// ids if needed. Update pin values to match the real values from the billing
+// system when available.
+export const planPins: Record<
+  string,
+  {
+    growth: { monthly: string; annual: string };
+    scale: { monthly: string; annual: string };
+    enterprise?: { contact: string };
+  }
+> = {
+  US: {
+    growth: { monthly: "8", annual: "9" },
+    scale: { monthly: "10", annual: "11" },
+  },
+  GB: {
+    growth: { monthly: "18", annual: "19" },
+    scale: { monthly: "20", annual: "21" },
+  },
+  NG: {
+    growth: { monthly: "28", annual: "29" },
+    scale: { monthly: "30", annual: "31" },
+  },
+  GH: {
+    growth: { monthly: "38", annual: "39" },
+    scale: { monthly: "40", annual: "41" },
+  },
+  ZA: {
+    growth: { monthly: "48", annual: "49" },
+    scale: { monthly: "50", annual: "51" },
+  },
+};
+
+export const defaultPlanPinPlatform = "smsapp";
+
+// Helper to get pin for a given country code, plan id and billing cycle.
+export function getPlanPin(
+  countryCode: string | undefined,
+  planId: "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+): string | null {
+  if (!countryCode) return null;
+  const key = countryCode.toUpperCase();
+  const mapping = planPins[key] || planPins["US"];
+
+  if (planId === "enterprise") return null;
+
+  const pin = mapping?.[planId]?.[billing];
+  return pin ?? null;
+}
+
+// Build the registration URL for the given country/plan/billing. Falls back to
+// a basic register URL when no pin is found.
+export function getRegisterUrl(
+  countryCode: string | undefined,
+  planId: "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+  platform = defaultPlanPinPlatform,
+): string {
+  const pin = getPlanPin(countryCode, planId, billing);
+  if (pin)
+    return `https://app.tracksend.co/register?pin=${pin}&platform=${platform}`;
+  // Fallback to the more explicit query params when pin is missing
+  if (planId === "enterprise") return "https://cal.com/tracksend-discover/tdc";
+  return `https://app.tracksend.co/register?pin=8&platform=${platform}`;
+}

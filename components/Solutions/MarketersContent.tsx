@@ -53,9 +53,7 @@ const MarketersContent: React.FC = () => {
                 <a href="https://app.tracksend.co/register">Get Started</a>
               </button>
               <button className="border-2 border-border-gray text-deep-navy h-14 px-8 rounded-full font-bold text-base hover:bg-gray-50 transition-colors">
-                <a href="https://tracksend.as.me/schedule/9cf8d404">
-                  Book Demo
-                </a>
+                <a href="https://cal.com/tracksend-discover/tdc">Book Demo</a>
               </button>
             </div>
           </div>

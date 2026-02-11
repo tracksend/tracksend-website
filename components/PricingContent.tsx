@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { getCurrencySymbol } from "@/lib/geolocation";
+import { getRegisterUrl } from "@/lib/pricingConstants";
 
 interface LocationData {
   countryCode: string;
@@ -36,6 +37,7 @@ export default function PricingContent({
           : countryPrices.growth.annual,
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
+      link: getRegisterUrl(location.countryCode, "growth", billingCycle),
     },
     {
       ...planTemplates.scale,
@@ -45,12 +47,14 @@ export default function PricingContent({
           : countryPrices.scale.annual,
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
+      link: getRegisterUrl(location.countryCode, "scale", billingCycle),
     },
     {
       ...planTemplates.enterprise,
       currency: "",
       currencyCode: "",
       basePrice: 0,
+      link: getRegisterUrl(location.countryCode, "enterprise", billingCycle),
     },
   ];
 
@@ -155,7 +159,7 @@ export default function PricingContent({
                     : "bg-gray-100 text-navy-dark hover:bg-gray-200"
                 }`}
               >
-                {plan.buttonText}
+                <a href={plan.link || "#"}>{plan.buttonText}</a>
               </button>
               <div className="space-y-4 mt-auto">
                 {plan.features.map((feature: string, idx: number) => (

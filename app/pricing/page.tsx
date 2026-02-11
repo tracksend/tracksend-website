@@ -22,7 +22,7 @@ async function getLocationFromGeoIP(ip: string): Promise<LocationData> {
   // const preferred = (process.env.GEOIP_PREFERRED || "maxmind").toLowerCase();
 
   if (preferred === "ipapi") {
-    console.log("getLocationFromGeoIP: preferred=ipapi, using ip-api for", ip);
+    // console.log("getLocationFromGeoIP: preferred=ipapi, using ip-api for", ip);
     return await getLocationFromIpApi(ip);
   }
 
@@ -35,7 +35,7 @@ async function getLocationFromGeoIP(ip: string): Promise<LocationData> {
   }
 
   try {
-    console.log("getLocationFromGeoIP: trying MaxMind for", ip);
+    // console.log("getLocationFromGeoIP: trying MaxMind for", ip);
     const auth = Buffer.from(
       `${process.env.GEOIP_ACCOUNT_ID}:${process.env.GEOIP_LICENSE_KEY}`,
     ).toString("base64");
@@ -70,7 +70,7 @@ async function getLocationFromGeoIP(ip: string): Promise<LocationData> {
       GH: "Ghana",
       ZA: "South Africa",
     };
-    console.log("getLocationFromGeoIP: MaxMind succeeded for", ip, countryCode);
+    // console.log("getLocationFromGeoIP: MaxMind succeeded for", ip, countryCode);
     return {
       countryCode,
       currency,
@@ -87,8 +87,7 @@ async function getLocationFromGeoIP(ip: string): Promise<LocationData> {
 
 async function getLocationFromIpApi(ip: string): Promise<LocationData> {
   try {
-    console.log("getLocationFromIpApi: requesting ip-api for", ip);
-    console.log("encodeURIComponent:", encodeURIComponent(ip));
+    // console.log("getLocationFromIpApi: requesting ip-api for", ip);
     const url = `http://ip-api.com/json/${encodeURIComponent(ip)}?fields=status,message,country,countryCode`;
     const res = await fetch(url, { method: "GET" });
     if (!res.ok) {
@@ -152,9 +151,7 @@ function extractClientIP(headersList: Headers): string {
 export default async function PricingPage() {
   const isDev = process.env.NODE_ENV === "development";
   const headersList = await headers();
-  // const clientIP = extractClientIP(headersList);
   const clientIP = isDev ? "8.8.8.8" : extractClientIP(headersList);
-  console.log("Client IP: ", clientIP);
   const location = await getLocationFromGeoIP(clientIP);
 
   console.log("Determined location:", location);
