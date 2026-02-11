@@ -211,11 +211,11 @@ export const planCredits: Record<
     scale: { monthly: number; annual: number };
   }
 > = {
-  US: { growth: { monthly: 45000, annual: 540000 }, scale: { monthly: 85000, annual: 1020000 } },
-  GB: { growth: { monthly: 45000, annual: 540000 }, scale: { monthly: 85000, annual: 1020000 } },
-  NG: { growth: { monthly: 80000, annual: 960000 }, scale: { monthly: 150000, annual: 1800000 } },
-  GH: { growth: { monthly: 25000, annual: 300000 }, scale: { monthly: 70000, annual: 840000 } },
-  ZA: { growth: { monthly: 100000, annual: 1200000 }, scale: { monthly: 200000, annual: 2400000 } },
+  US: { growth: { monthly: 25, annual: 250 }, scale: { monthly: 80, annual: 800 } },
+  GB: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
+  NG: { growth: { monthly: 45000, annual: 450000 }, scale: { monthly: 85000, annual: 850000 } },
+  GH: { growth: { monthly: 350, annual: 3500 }, scale: { monthly: 700, annual: 70000 } },
+  ZA: { growth: { monthly: 500, annual: 5000 }, scale: { monthly: 1000, annual: 10000 } },
 };
 
 planCredits.default = planCredits.US;
