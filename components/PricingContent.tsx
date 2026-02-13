@@ -274,7 +274,7 @@ export default function PricingContent({
                     <span className="material-symbols-outlined text-gray-400">
                       chat_bubble
                     </span>{" "}
-                    RCS
+                    RCS (SMS with images and videos)
                   </td>
                   <td className="px-6 py-4 font-mono">{countryRates.rcs}</td>
                   <td className="px-6 py-4 text-gray-500">Basic message</td>
