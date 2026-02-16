@@ -20,6 +20,45 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/lead-generation",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/sms-product",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/video-tutorials",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/trackchat",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/landing-page",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/customerio",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/blog",
+        destination: "/resources",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
