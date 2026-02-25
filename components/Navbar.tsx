@@ -11,7 +11,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDownIcon } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { ChevronDownIcon, LogOut } from "lucide-react";
+import { useLocalUser, getInitials } from "@/hooks/useLocalUser";
+import { identifyHeapUser } from "@/components/HeapProvider";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,6 +23,7 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const isLanding = pathname === "/";
   const isActive = (path: string) => pathname === path;
+  const { user, isLoading } = useLocalUser();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +32,13 @@ const Navbar: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Identify user with Heap when user loads
+  useEffect(() => {
+    if (user && !isLoading) {
+      identifyHeapUser(user);
+    }
+  }, [user, isLoading]);
 
   const navClass = `fixed top-0 z-50 w-full transition-all duration-300 ${
     isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm h-16" : "h-20"
@@ -224,33 +235,110 @@ const Navbar: React.FC = () => {
 
                 {/* CTA Section */}
                 <div className="px-6 py-6 flex flex-col gap-3">
-                  <a
-                    href="https://app.tracksend.co/login"
-                    className="px-4 py-3 text-center text-base font-semibold text-gray-700 hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Login
-                  </a>
-                  <Link
-                    href="https://app.tracksend.co/register"
-                    className="px-5 py-3 rounded-full bg-secondary text-white font-bold text-center hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
+                  {user ? (
+                    <>
+                      <Link
+                        href="https://app.tracksend.co/dashboard"
+                        className="px-4 py-3 text-center text-base font-semibold text-primary hover:text-primary/80 transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Dashboard
+                      </Link>
+                      <button
+                        onClick={() => {
+                          localStorage.removeItem("ts_user");
+                          setIsMobileMenuOpen(false);
+                          window.location.reload();
+                        }}
+                        className="px-4 py-3 text-center text-base font-semibold text-gray-700 hover:text-red-600 transition-colors flex items-center justify-center gap-2"
+                      >
+                        <LogOut size={16} />
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        href="https://app.tracksend.co/login"
+                        className="px-4 py-3 text-center text-base font-semibold text-gray-700 hover:text-primary transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Login
+                      </a>
+                      <Link
+                        href="https://app.tracksend.co/register"
+                        className="px-5 py-3 rounded-full bg-secondary text-white font-bold text-center hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Get Started
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             </SheetContent>
           </Sheet>
-          <a
-            href="https://app.tracksend.co/login"
-            className={`hidden md:block text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
-          >
-            Login
-          </a>
-          <button className="hidden md:block rounded-full bg-secondary px-5 py-2 md:px-8 md:py-3 text-sm font-bold text-white hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
-            <Link href="https://app.tracksend.co/register">Get Started</Link>
-          </button>
+
+          {/* Desktop CTA Section */}
+          {user ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="hidden md:flex items-center gap-2 p-1 rounded-full hover:bg-gray-100 transition-colors">
+                  <Avatar className="h-8 w-8 bg-primary">
+                    <AvatarFallback className="bg-primary text-white font-semibold">
+                      {getInitials(user.name)}
+                    </AvatarFallback>
+                  </Avatar>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem
+                  disabled
+                  className="flex flex-col gap-1 py-2 pointer-events-none"
+                >
+                  <span className="text-sm font-semibold text-gray-900">
+                    {user.name}
+                  </span>
+                  <span className="text-xs text-gray-500">{user.email}</span>
+                </DropdownMenuItem>
+                <Separator className="my-2" />
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="https://app.tracksend.co/dashboard"
+                    className="text-sm font-medium text-gray-700 hover:text-primary cursor-pointer"
+                  >
+                    Dashboard
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem("ts_user");
+                      window.location.reload();
+                    }}
+                    className="text-sm font-medium text-red-600 hover:text-red-700 cursor-pointer flex items-center gap-2"
+                  >
+                    <LogOut size={14} />
+                    Logout
+                  </button>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <>
+              <a
+                href="https://app.tracksend.co/login"
+                className={`hidden md:block text-sm font-semibold transition-colors hover:text-primary ${textClass}`}
+              >
+                Login
+              </a>
+              <button className="hidden md:block rounded-full bg-secondary px-5 py-2 md:px-8 md:py-3 text-sm font-bold text-white hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all">
+                <Link href="https://app.tracksend.co/register">
+                  Get Started
+                </Link>
+              </button>
+            </>
+          )}
         </div>
       </div>
     </nav>
