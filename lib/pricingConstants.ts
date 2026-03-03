@@ -33,8 +33,8 @@ export const basePrices: Record<
     scale: { monthly: 1400, annual: "14k" },
   },
   "south africa": {
-    growth: { monthly: 750, annual: "7.5" },
-    scale: { monthly: 1400, annual: "14k" },
+    growth: { monthly: 500, annual: "5k" },
+    scale: { monthly: 1500, annual: "15k" },
   },
 };
 
@@ -161,8 +161,8 @@ export const planPins: Record<
     scale: { monthly: "2zsDe6ECkM5V0zxZrdmhH4jVMxO", annual: "2zsDe6aA23xE4faYv48eg5mZbKr" },
   },
   ZA: {
-    growth: { monthly: "48", annual: "49" },
-    scale: { monthly: "50", annual: "51" },
+    growth: { monthly: "33DoLpbY0jEKy2TKWO4DUldtnc9", annual: "2zsDdzQSQp9VymAoLbEbGCkTXL5" },
+    scale: { monthly: "2zsDe2Vttqtpx5HsK0BjzTSp7RC", annual: "2zsDe06HvUl23SbdW3Go5c5MEKY" },
   },
 };
 
@@ -215,7 +215,7 @@ export const planCredits: Record<
   GB: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
   NG: { growth: { monthly: 45000, annual: 450000 }, scale: { monthly: 85000, annual: 850000 } },
   GH: { growth: { monthly: 400, annual: 4000 }, scale: { monthly: 800, annual: 8000 } },
-  ZA: { growth: { monthly: 400, annual: 4000 }, scale: { monthly: 800, annual: 8000 } },
+  ZA: { growth: { monthly: 250, annual: 2500 }, scale: { monthly: 1125, annual: 11250 } },
 };
 
 planCredits.default = planCredits.US;
