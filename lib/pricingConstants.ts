@@ -157,8 +157,8 @@ export const planPins: Record<
     scale: { monthly: "2zsDe4Mcgrkh1Y2z8R7r1QuGL0N", annual: "2zsDe1UG352MAHTIL5thSSo8JcZ" },
   },
   GH: {
-    growth: { monthly: "38", annual: "39" },
-    scale: { monthly: "40", annual: "41" },
+    growth: { monthly: "2zsDe0adg7N20MmBKw552pgwUIw", annual: "2zsDe2URjqjMpwhNbQhrH3wtPIR" },
+    scale: { monthly: "2zsDe6ECkM5V0zxZrdmhH4jVMxO", annual: "2zsDe6aA23xE4faYv48eg5mZbKr" },
   },
   ZA: {
     growth: { monthly: "48", annual: "49" },
