@@ -95,6 +95,7 @@ export const planTemplates = {
       "Dynamic Segments",
       "Integrations + webhooks",
       "AI Optimization",
+      "80K contacts, 3k conversations."
     ],
     buttonText: "Get Growth",
     isPopular: false,
@@ -110,8 +111,9 @@ export const planTemplates = {
       "Conversation Inbox",
       "AI Chatbots",
       "Smart URLs & Follow-ups",
+       "200K contacts, 10k conversations",
       "Priority support",
-      "200K contacts, 10k conversations"
+     
     ],
     buttonText: "Get Scale",
     isPopular: true,
