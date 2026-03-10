@@ -109,7 +109,7 @@ export const planTemplates = {
       "Everything in Growth",
       "Conversation Inbox",
       "AI Chatbots",
-      "Smart Follow-ups",
+      "Smart URLs & Follow-ups",
       "Priority support",
     ],
     buttonText: "Get Scale",
