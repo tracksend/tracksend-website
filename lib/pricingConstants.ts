@@ -111,6 +111,7 @@ export const planTemplates = {
       "AI Chatbots",
       "Smart URLs & Follow-ups",
       "Priority support",
+      "200K contacts, 10k conversations"
     ],
     buttonText: "Get Scale",
     isPopular: true,
