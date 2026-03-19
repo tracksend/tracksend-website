@@ -151,6 +151,7 @@ function extractClientIP(headersList: Headers): string {
 export default async function PricingPage() {
   const isDev = process.env.NODE_ENV === "development";
   const headersList = await headers();
+  // const clientIP = isDev ? "102.89.0.190" : extractClientIP(headersList);
   const clientIP = isDev ? "8.8.8.8" : extractClientIP(headersList);
   const location = await getLocationFromGeoIP(clientIP);
 

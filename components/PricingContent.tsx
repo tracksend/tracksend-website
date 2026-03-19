@@ -33,6 +33,28 @@ export default function PricingContent({
 
   // Build plans with country-specific pricing
   const plans = [
+    // location.countryCode === "Nigeria" && essentialPlan,
+    {
+      ...planTemplates?.essential,
+      basePrice:
+        billingCycle === "monthly"
+          ? countryPrices?.essential?.monthly
+          : countryPrices?.essential?.annual,
+      currency: getCurrencySymbol(location.currency),
+      currencyCode: location.currency,
+      link: getRegisterUrl(location.countryCode, "essential", billingCycle),
+      credits: getRawPlanCredits(
+        location.countryCode,
+        "essential",
+        billingCycle,
+      ),
+      formattedCredits: getFormattedPlanCredits(
+        location.countryCode,
+        "essential",
+        billingCycle,
+        location.currency,
+      ),
+    },
     {
       ...planTemplates.growth,
       basePrice:
@@ -75,6 +97,12 @@ export default function PricingContent({
       link: getRegisterUrl(location.countryCode, "enterprise", billingCycle),
     },
   ];
+
+  const hasEssential = Object.keys(countryPrices).includes("essential");
+
+  const filteredPlans = hasEssential
+    ? plans
+    : plans.filter((plan) => plan.id !== "essential");
 
   return (
     <>
@@ -130,8 +158,10 @@ export default function PricingContent({
 
       {/* Pricing Grid */}
       <section className="bg-[#f8f6f6] py-24 px-4 lg:px-20 -mt-16 relative z-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {plans.map((plan) => (
+        <div
+          className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 ${filteredPlans?.length > 3 ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-8`}
+        >
+          {filteredPlans?.map((plan: any) => (
             <div
               key={plan.id}
               className={`flex flex-col rounded-3xl p-8 transition-all duration-300 text-left ${

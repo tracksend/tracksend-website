@@ -12,6 +12,7 @@ export const currencySymbols: Record<string, string> = {
 export const basePrices: Record<
   string,
   {
+    essential?: { monthly: number | string; annual: number | string };
     growth: { monthly: number | string; annual: number | string };
     scale: { monthly: number | string; annual: number | string };
   }
@@ -25,6 +26,7 @@ export const basePrices: Record<
     scale: { monthly: 100, annual: 1000 },
   },
   nigeria: {
+    essential: { monthly: "30k", annual: "300k" },
     growth: { monthly: "80k", annual: "800k" },
     scale: { monthly: "150k", annual: "1.5M" },
   },
@@ -83,6 +85,23 @@ messageChargesPerCountry.default = messageChargesPerCountry["united states"];
 
 // Plan templates (reusable across countries)
 export const planTemplates = {
+  essential: {
+    id: "essential",
+    name: "Essential",
+    credits: 15,
+    description:
+      "Best for businesses running campaigns and optimizing engagement.",
+    features: [
+      "Unlimited Campaigns",
+      "Click Tracking",
+      "Basic segments",
+      "Integrations",
+      "Up to 15K contacts",
+      "500 inbound replies/mo",
+    ],
+    buttonText: "Get Growth",
+    isPopular: false,
+  },
   growth: {
     id: "growth",
     name: "Growth",
@@ -95,7 +114,7 @@ export const planTemplates = {
       "Dynamic Segments",
       "Integrations + webhooks",
       "AI Optimization",
-      "80K contacts, 3k conversations."
+      "80K contacts, 3k conversations.",
     ],
     buttonText: "Get Growth",
     isPopular: false,
@@ -111,9 +130,8 @@ export const planTemplates = {
       "Conversation Inbox",
       "AI Chatbots",
       "Smart URLs & Follow-ups",
-       "200K contacts, 10k conversations",
+      "200K contacts, 10k conversations",
       "Priority support",
-     
     ],
     buttonText: "Get Scale",
     isPopular: true,
@@ -142,30 +160,65 @@ export const planTemplates = {
 export const planPins: Record<
   string,
   {
+    essential?: { monthly: string; annual: string };
     growth: { monthly: string; annual: string };
     scale: { monthly: string; annual: string };
     enterprise?: { contact: string };
   }
 > = {
   US: {
-    growth: { monthly: "2zsDe0ocr37GDz7XZCeN5V6Po4H", annual: "2zsDe5ZYiDFueGsZWCDgRJ3NwjN" },
-    scale: { monthly: "2zsDe439OcJwZj0hzJqAbjExRVX", annual: "2zsDe0LLERxQFhQesEJVdppLZJE" },
+    growth: {
+      monthly: "2zsDe0ocr37GDz7XZCeN5V6Po4H",
+      annual: "2zsDe5ZYiDFueGsZWCDgRJ3NwjN",
+    },
+    scale: {
+      monthly: "2zsDe439OcJwZj0hzJqAbjExRVX",
+      annual: "2zsDe0LLERxQFhQesEJVdppLZJE",
+    },
   },
   GB: {
-    growth: { monthly: "33DkWqNFSzThu9at5xziUHCSaNJ", annual: "2zsDe3XTP1soIPumcMqwiYeFwPk" },
-    scale: { monthly: "33DlMvXRcfQfvPddo2UXGj0UEOR", annual: "33DlK3XIxuRwTZiTAtVSxEYf58T" },
+    growth: {
+      monthly: "33DkWqNFSzThu9at5xziUHCSaNJ",
+      annual: "2zsDe3XTP1soIPumcMqwiYeFwPk",
+    },
+    scale: {
+      monthly: "33DlMvXRcfQfvPddo2UXGj0UEOR",
+      annual: "33DlK3XIxuRwTZiTAtVSxEYf58T",
+    },
   },
   NG: {
-    growth: { monthly: "2zsDe4Z4j0Oe4QO8qvc5JIwt9F6", annual: "2zsDe26zBSJ6iwwM3iizanEC8n5" },
-    scale: { monthly: "2zsDe4Mcgrkh1Y2z8R7r1QuGL0N", annual: "2zsDe1UG352MAHTIL5thSSo8JcZ" },
+    essential: {
+      monthly: "2zsDdztr222s1H0DGMRy0vBym5i",
+      annual: "2zsDe0wqaCAs50TmesKRWNvu18w",
+    },
+    growth: {
+      monthly: "2zsDe4Z4j0Oe4QO8qvc5JIwt9F6",
+      annual: "2zsDe26zBSJ6iwwM3iizanEC8n5",
+    },
+    scale: {
+      monthly: "2zsDe4Mcgrkh1Y2z8R7r1QuGL0N",
+      annual: "2zsDe1UG352MAHTIL5thSSo8JcZ",
+    },
   },
   GH: {
-    growth: { monthly: "2zsDe0adg7N20MmBKw552pgwUIw", annual: "2zsDe2URjqjMpwhNbQhrH3wtPIR" },
-    scale: { monthly: "2zsDe6ECkM5V0zxZrdmhH4jVMxO", annual: "2zsDe6aA23xE4faYv48eg5mZbKr" },
+    growth: {
+      monthly: "2zsDe0adg7N20MmBKw552pgwUIw",
+      annual: "2zsDe2URjqjMpwhNbQhrH3wtPIR",
+    },
+    scale: {
+      monthly: "2zsDe6ECkM5V0zxZrdmhH4jVMxO",
+      annual: "2zsDe6aA23xE4faYv48eg5mZbKr",
+    },
   },
   ZA: {
-    growth: { monthly: "33DoLpbY0jEKy2TKWO4DUldtnc9", annual: "2zsDdzQSQp9VymAoLbEbGCkTXL5" },
-    scale: { monthly: "2zsDe2Vttqtpx5HsK0BjzTSp7RC", annual: "2zsDe06HvUl23SbdW3Go5c5MEKY" },
+    growth: {
+      monthly: "33DoLpbY0jEKy2TKWO4DUldtnc9",
+      annual: "2zsDdzQSQp9VymAoLbEbGCkTXL5",
+    },
+    scale: {
+      monthly: "2zsDe2Vttqtpx5HsK0BjzTSp7RC",
+      annual: "2zsDe06HvUl23SbdW3Go5c5MEKY",
+    },
   },
 };
 
@@ -174,7 +227,7 @@ export const defaultPlanPinPlatform = "smsapp";
 // Helper to get pin for a given country code, plan id and billing cycle.
 export function getPlanPin(
   countryCode: string | undefined,
-  planId: "growth" | "scale" | "enterprise",
+  planId: "essential" | "growth" | "scale" | "enterprise",
   billing: "monthly" | "annual",
 ): string | null {
   if (!countryCode) return null;
@@ -191,7 +244,7 @@ export function getPlanPin(
 // a basic register URL when no pin is found.
 export function getRegisterUrl(
   countryCode: string | undefined,
-  planId: "growth" | "scale" | "enterprise",
+  planId: "essential" | "growth" | "scale" | "enterprise",
   billing: "monthly" | "annual",
   platform = defaultPlanPinPlatform,
 ): string {
@@ -210,15 +263,32 @@ export function getRegisterUrl(
 export const planCredits: Record<
   string,
   {
+    essential?: { monthly: number; annual: number };
     growth: { monthly: number; annual: number };
     scale: { monthly: number; annual: number };
   }
 > = {
-  US: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
-  GB: { growth: { monthly: 30, annual: 300 }, scale: { monthly: 60, annual: 600 } },
-  NG: { growth: { monthly: 45000, annual: 450000 }, scale: { monthly: 85000, annual: 850000 } },
-  GH: { growth: { monthly: 400, annual: 4000 }, scale: { monthly: 800, annual: 8000 } },
-  ZA: { growth: { monthly: 250, annual: 2500 }, scale: { monthly: 1125, annual: 11250 } },
+  US: {
+    growth: { monthly: 30, annual: 300 },
+    scale: { monthly: 60, annual: 600 },
+  },
+  GB: {
+    growth: { monthly: 30, annual: 300 },
+    scale: { monthly: 60, annual: 600 },
+  },
+  NG: {
+    essential: { monthly: 15000, annual: 150000 },
+    growth: { monthly: 45000, annual: 450000 },
+    scale: { monthly: 85000, annual: 850000 },
+  },
+  GH: {
+    growth: { monthly: 400, annual: 4000 },
+    scale: { monthly: 800, annual: 8000 },
+  },
+  ZA: {
+    growth: { monthly: 250, annual: 2500 },
+    scale: { monthly: 1125, annual: 11250 },
+  },
 };
 
 planCredits.default = planCredits.US;
@@ -227,7 +297,7 @@ planCredits.default = planCredits.US;
 // to `planTemplates` values multiplied by 1000 if no mapping exists.
 export function getRawPlanCredits(
   countryCode: string | undefined,
-  planId: "growth" | "scale" | "enterprise",
+  planId: "essential" | "growth" | "scale" | "enterprise",
   billing: "monthly" | "annual",
 ): number {
   if (planId === "enterprise") return 0;
@@ -245,15 +315,17 @@ export function formatCreditsWithCurrency(
   amount: number,
   currencyCode?: string,
 ): string {
-  const formatted = new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 }).format(amount);
-  const symbol = currencyCode ? (currencySymbols[currencyCode] || "") : "";
+  const formatted = new Intl.NumberFormat(undefined, {
+    maximumFractionDigits: 0,
+  }).format(amount);
+  const symbol = currencyCode ? currencySymbols[currencyCode] || "" : "";
   return `${symbol}${formatted}`;
 }
 
 // High-level helper: returns the formatted credits string for display.
 export function getFormattedPlanCredits(
   countryCode: string | undefined,
-  planId: "growth" | "scale" | "enterprise",
+  planId: "essential" | "growth" | "scale" | "enterprise",
   billing: "monthly" | "annual",
   currencyCode?: string,
 ): string {
