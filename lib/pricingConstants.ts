@@ -99,7 +99,7 @@ export const planTemplates = {
       "Up to 15K contacts",
       "500 inbound replies/mo",
     ],
-    buttonText: "Get Growth",
+    buttonText: "Get Essential",
     isPopular: false,
   },
   growth: {
@@ -107,14 +107,14 @@ export const planTemplates = {
     name: "Growth",
     credits: 45,
     description:
-      "Best for businesses running campaigns and optimizing engagement.",
+      "Best for businesses running campaigns and optimizing engagement."
     features: [
-      "Unlimited Campaigns",
-      "Click Tracking",
+      "Everything in Essential",
       "Dynamic Segments",
-      "Integrations + webhooks",
+      "Delivery Optimizer",
       "AI Optimization",
-      "80K contacts, 3k conversations.",
+      "Up to 80K contacts",
+      "3,000 inbound replies/mo",
     ],
     buttonText: "Get Growth",
     isPopular: false,
@@ -130,7 +130,8 @@ export const planTemplates = {
       "Conversation Inbox",
       "AI Chatbots",
       "Smart URLs & Follow-ups",
-      "200K contacts, 10k conversations",
+     "Up to 200K contacts",
+      "10,000 inbound replies/mo",
       "Priority support",
     ],
     buttonText: "Get Scale",
