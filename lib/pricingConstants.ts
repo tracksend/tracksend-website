@@ -107,7 +107,7 @@ export const planTemplates = {
     name: "Growth",
     credits: 45,
     description:
-      "Best for businesses running campaigns and optimizing engagement."
+      "Best for businesses running campaigns and optimizing engagement.",
     features: [
       "Everything in Essential",
       "Dynamic Segments",
@@ -130,7 +130,7 @@ export const planTemplates = {
       "Conversation Inbox",
       "AI Chatbots",
       "Smart URLs & Follow-ups",
-     "Up to 200K contacts",
+      "Up to 200K contacts",
       "10,000 inbound replies/mo",
       "Priority support",
     ],
