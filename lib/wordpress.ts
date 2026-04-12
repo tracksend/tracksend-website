@@ -1,5 +1,5 @@
 const WORDPRESS_URL =
-  process.env.NEXT_PUBLIC_WORDPRESS_URL || "https://tracksend.co";
+  process.env.NEXT_PUBLIC_WORDPRESS_URL || "https://dev-tracksend-blog.pantheonsite.io";
 
 interface WordPressPost {
   id: number;

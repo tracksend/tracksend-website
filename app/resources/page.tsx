@@ -19,9 +19,11 @@ export const revalidate = 3600; // ISR: revalidate every hour
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
+  // searchParams: { page?: string };
 }) {
-  const page = parseInt(searchParams.page || "1", 10);
+  const params = await searchParams;
+  const page = parseInt(params?.page || "1", 10);
   const result = await fetchPosts(page, 10);
 
   if (!result) {
