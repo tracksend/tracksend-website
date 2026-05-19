@@ -170,8 +170,14 @@ export default async function BlogPostPage({
             <p className="text-gray-700 mb-6">
               Start with Tracksend today and create conversations that convert.
             </p>
-            <button className="rounded-full bg-primary px-8 py-3 text-sm font-bold text-navy hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all">
-              Start Free Trial
+            <button className="rounded-full bg-primary px-8 py-3 text-sm font-bold text-navy hover:shadow-glow-cyan transition-all">
+              <a
+                href="https://app.tracksend.co/register"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start Free Trial
+              </a>
             </button>
           </div>
         </article>
