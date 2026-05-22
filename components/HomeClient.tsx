@@ -78,8 +78,8 @@ export default function HomeClient() {
               </span>
             </div>
             <h1 className="text-4xl font-extrabold leading-[1.1] text-white sm:text-6xl mb-6 tracking-tight">
-              Turn every message <br /> into an{" "}
-              <span className="text-gradient-cyan">opportunity.</span>
+            Send messages <br /> that{" "}
+              <span className="text-gradient-cyan">convert.</span>
             </h1>
             <p className="text-lg text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto mb-8">
              Send SMS, WhatsApp, and SMS with images and videos — with tracking, automated follow-ups, 
