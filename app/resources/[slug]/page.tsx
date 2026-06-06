@@ -136,27 +136,7 @@ export default async function BlogPostPage({
 
           {/* Content */}
           <div
-            className="prose prose-lg max-w-none mb-12
-              prose-headings:text-navy-dark prose-headings:font-bold
-              prose-headings:mt-8 prose-headings:mb-4
-              prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-              prose-a:text-primary prose-a:hover:underline
-              prose-strong:text-navy-dark prose-strong:font-semibold
-              prose-em:text-gray-700
-              prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-4
-              prose-ol:list-decimal prose-ol:ml-6 prose-ol:mb-4
-              prose-li:text-gray-700 prose-li:mb-2
-              prose-blockquote:border-l-4 prose-blockquote:border-primary
-              prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-700
-              prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:rounded-r-lg
-              prose-code:bg-gray-100 prose-code:text-red-600 prose-code:px-2 prose-code:py-1 prose-code:rounded
-              prose-pre:bg-navy-dark prose-pre:text-gray-50 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto
-              prose-img:rounded-lg prose-img:max-w-full
-              prose-table:w-full prose-table:border-collapse
-              prose-td:border prose-td:border-gray-300 prose-td:px-4 prose-td:py-2
-              prose-th:border prose-th:border-gray-300 prose-th:px-4 prose-th:py-2 prose-th:bg-gray-100
-              prose-hr:my-8 prose-hr:border-gray-300"
+            className="wordpress-content mb-12"
             dangerouslySetInnerHTML={{
               __html: post.content.rendered,
             }}
