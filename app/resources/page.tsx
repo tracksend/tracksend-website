@@ -135,7 +135,7 @@ export default async function BlogPage({
                 <div className="flex justify-center items-center gap-2 mb-12">
                   {page > 1 && (
                     <Link
-                      href={`/blog?page=${page - 1}`}
+                      href={`/resources?page=${page - 1}`}
                       className="px-4 py-2 rounded-lg bg-white text-navy-dark hover:bg-gray-100 transition-colors font-semibold"
                     >
                       ← Previous
@@ -158,7 +158,7 @@ export default async function BlogPage({
                       return (
                         <Link
                           key={pageNum}
-                          href={`/blog?page=${pageNum}`}
+                          href={`/resources?page=${pageNum}`}
                           className={`px-3 py-2 rounded-lg transition-colors font-semibold ${
                             page === pageNum
                               ? "bg-primary text-navy"
@@ -173,7 +173,7 @@ export default async function BlogPage({
 
                   {page < totalPages && (
                     <Link
-                      href={`/blog?page=${page + 1}`}
+                      href={`/resources?page=${page + 1}`}
                       className="px-4 py-2 rounded-lg bg-white text-navy-dark hover:bg-gray-100 transition-colors font-semibold"
                     >
                       Next →

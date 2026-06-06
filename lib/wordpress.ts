@@ -1,5 +1,6 @@
 const WORDPRESS_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_URL || "https://dev-tracksend-blog.pantheonsite.io";
+const POSTS_REVALIDATE_SECONDS = 300;
 
 interface WordPressPost {
   id: number;
@@ -42,10 +43,16 @@ export async function fetchPosts(page: number = 1, perPage: number = 10) {
     const url = new URL(`${WORDPRESS_URL}/wp-json/wp/v2/posts`);
     url.searchParams.append("page", page.toString());
     url.searchParams.append("per_page", perPage.toString());
+    url.searchParams.append("status", "publish");
+    url.searchParams.append("orderby", "date");
+    url.searchParams.append("order", "desc");
     url.searchParams.append("_embed", "true");
 
     const response = await fetch(url.toString(), {
-      next: { revalidate: 3600 }, // ISR: revalidate every hour
+      next: {
+        revalidate: POSTS_REVALIDATE_SECONDS,
+        tags: ["wordpress-posts"],
+      },
     });
 
     if (!response.ok) {
@@ -71,10 +78,14 @@ export async function fetchPostBySlug(slug: string) {
   try {
     const url = new URL(`${WORDPRESS_URL}/wp-json/wp/v2/posts`);
     url.searchParams.append("slug", slug);
+    url.searchParams.append("status", "publish");
     url.searchParams.append("_embed", "true");
 
     const response = await fetch(url.toString(), {
-      next: { revalidate: 3600 },
+      next: {
+        revalidate: POSTS_REVALIDATE_SECONDS,
+        tags: ["wordpress-posts"],
+      },
     });
 
     if (!response.ok) {
@@ -93,10 +104,16 @@ export async function fetchPostSlugs() {
   try {
     const url = new URL(`${WORDPRESS_URL}/wp-json/wp/v2/posts`);
     url.searchParams.append("per_page", "100");
+    url.searchParams.append("status", "publish");
+    url.searchParams.append("orderby", "date");
+    url.searchParams.append("order", "desc");
     url.searchParams.append("_fields", "slug");
 
     const response = await fetch(url.toString(), {
-      next: { revalidate: 3600 },
+      next: {
+        revalidate: POSTS_REVALIDATE_SECONDS,
+        tags: ["wordpress-posts"],
+      },
     });
 
     if (!response.ok) {
