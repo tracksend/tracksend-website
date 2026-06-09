@@ -65,7 +65,7 @@ export const messageChargesPerCountry: Record<
   },
   nigeria: {
     sms: "₦5.50",
-    rcs: "₦5",
+    rcs: "₦7.5",
     whatsapp: "₦2.50",
   },
   ghana: {
