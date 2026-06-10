@@ -43,6 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="facebook-domain-verification"
+          content="r386b2k1yqd9osvt8acii0u5sv7xfc"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
