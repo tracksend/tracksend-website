@@ -81,7 +81,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K7PD3339"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
