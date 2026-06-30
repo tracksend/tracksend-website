@@ -44,6 +44,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* <meta
+          name="facebook-domain-verification"
+          content="r386b2k1yqd9osvt8acii0u5sv7xfc"
+        /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        {/* <script
+          src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"
+          type="text/javascript"
+        ></script> */}
         {/* <script>
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -61,24 +77,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K7PD3339');
           `}
         </Script>
-      </head>
-      <head>
-        {/* <meta
-          name="facebook-domain-verification"
-          content="r386b2k1yqd9osvt8acii0u5sv7xfc"
-        /> */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-        {/* <script
-          src="https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"
-          type="text/javascript"
-        ></script> */}
       </head>
       <body className={`font-sans antialiased`}>
         <noscript>
