@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import HomeClient from "@/components/HomeClient";
 
 export const metadata: Metadata = {
-  title: "Tracksend — Turn SMS and WhatsApp into growth channels",
+  title: "Tracksend — SMS and WhatsApp Marketing Platform",
   description:
-    "Turn every SMS & WhatsApp message into a sales engine—AI-optimized, multimedia SMS & proven ROI.",
+    "Send SMS and WhatsApp messages that converts.",
   openGraph: {
-    title: "Tracksend — Turn messages into opportunities",
+    title: "Tracksend — SMS and WhatsApp Marketing Platform",
     description:
-      "Turn every SMS & WhatsApp message into a sales engine—AI-optimized, multimedia SMS & proven ROI.",
+      "Send SMS and WhatsApp messages that converts.",
     url: "https://tracksend.co/",
     siteName: "Tracksend",
     images: [
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tracksend — Turn SMS and WhatsApp into growth channels",
+    title: "Tracksend — SMS and WhatsApp Marketing Platform",
     description:
-      "Turn every SMS & WhatsApp message into a sales engine—AI-optimized, multimedia SMS & proven ROI.",
+      "Send SMS and WhatsApp messages that converts.",
     site: "@tracksend",
   },
   alternates: {
