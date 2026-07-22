@@ -1,6 +1,6 @@
 const WORDPRESS_URL =
   process.env.NEXT_PUBLIC_WORDPRESS_URL || "https://dev-tracksend-blog.pantheonsite.io";
-const POSTS_REVALIDATE_SECONDS = 300;
+const POSTS_REVALIDATE_SECONDS = 10;
 
 interface WordPressPost {
   id: number;
