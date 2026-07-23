@@ -1,5 +1,6 @@
 const WORDPRESS_URL =
-  process.env.NEXT_PUBLIC_WORDPRESS_URL || "https://dev-tracksend-blog.pantheonsite.io";
+  process.env.NEXT_PUBLIC_WORDPRESS_URL ||
+  "https://dev-tracksend-blog.pantheonsite.io";
 const POSTS_REVALIDATE_SECONDS = 300;
 
 interface WordPressPost {
@@ -47,6 +48,8 @@ export async function fetchPosts(page: number = 1, perPage: number = 10) {
     url.searchParams.append("orderby", "date");
     url.searchParams.append("order", "desc");
     url.searchParams.append("_embed", "true");
+    // Append a cache-busting query parameter to avoid caching issues
+    url.searchParams.append("_cb", Date.now().toString());
 
     const response = await fetch(url.toString(), {
       next: {
