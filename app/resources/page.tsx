@@ -14,7 +14,6 @@ export const metadata = {
   },
 };
 
-export const revalidate = 3600; // ISR: revalidate every hour
 
 export default async function BlogPage({
   searchParams,
