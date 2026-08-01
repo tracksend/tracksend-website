@@ -266,7 +266,7 @@ export default function PricingContent({
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12 text-left">
             <div>
               <h2 className="text-3xl font-bold text-navy-dark mb-2">
-                Transparent usage rates
+                Additional usage rates
               </h2>
               <p className="text-gray-500">
                 Pay only for what you use. Showing rates for{" "}
