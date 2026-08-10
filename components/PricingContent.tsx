@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { getCurrencySymbol } from "@/lib/geolocation";
 import {
   getRegisterUrl,
-  getFormattedPlanCredits,
-  getRawPlanCredits,
+  getFormattedPlanSms,
+  getRawPlanSms,
 } from "@/lib/pricingConstants";
 
 interface LocationData {
@@ -43,16 +43,11 @@ export default function PricingContent({
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
       link: getRegisterUrl(location.countryCode, "essential", billingCycle),
-      credits: getRawPlanCredits(
+      sms: getRawPlanSms(location.countryCode, "essential", billingCycle),
+      formattedSms: getFormattedPlanSms(
         location.countryCode,
         "essential",
         billingCycle,
-      ),
-      formattedCredits: getFormattedPlanCredits(
-        location.countryCode,
-        "essential",
-        billingCycle,
-        location.currency,
       ),
     },
     {
@@ -64,12 +59,11 @@ export default function PricingContent({
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
       link: getRegisterUrl(location.countryCode, "growth", billingCycle),
-      credits: getRawPlanCredits(location.countryCode, "growth", billingCycle),
-      formattedCredits: getFormattedPlanCredits(
+      sms: getRawPlanSms(location.countryCode, "growth", billingCycle),
+      formattedSms: getFormattedPlanSms(
         location.countryCode,
         "growth",
         billingCycle,
-        location.currency,
       ),
     },
     {
@@ -81,12 +75,11 @@ export default function PricingContent({
       currency: getCurrencySymbol(location.currency),
       currencyCode: location.currency,
       link: getRegisterUrl(location.countryCode, "scale", billingCycle),
-      credits: getRawPlanCredits(location.countryCode, "scale", billingCycle),
-      formattedCredits: getFormattedPlanCredits(
+      sms: getRawPlanSms(location.countryCode, "scale", billingCycle),
+      formattedSms: getFormattedPlanSms(
         location.countryCode,
         "scale",
         billingCycle,
-        location.currency,
       ),
     },
     {
@@ -191,9 +184,9 @@ export default function PricingContent({
                     </span>
                   )}
                 </div>
-                {plan.credits > 0 && (
+                {plan.sms > 0 && (
                   <p className="text-secondary text-sm font-bold mt-2">
-                    Includes {plan.formattedCredits} credits
+                    Includes {plan.formattedSms} SMS
                   </p>
                 )}
                 <p className="text-gray-500 text-sm mt-4 leading-relaxed">
