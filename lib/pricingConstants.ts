@@ -294,6 +294,63 @@ export const planCredits: Record<
 
 planCredits.default = planCredits.US;
 
+// SMS messages included per country, plan and billing cycle. These are kept
+// separate from wallet credits because the credit cost of an SMS varies by
+// country.
+export const planSms: Record<
+  string,
+  {
+    essential?: { monthly: number; annual: number };
+    growth: { monthly: number; annual: number };
+    scale: { monthly: number; annual: number };
+  }
+> = {
+  US: {
+    growth: { monthly: 5000, annual: 50000 },
+    scale: { monthly: 10000, annual: 100000 },
+  },
+  GB: {
+    growth: { monthly: 937, annual: 9375 },
+    scale: { monthly: 1875, annual: 18750 },
+  },
+  NG: {
+    essential: { monthly: 2500, annual: 25000 },
+    growth: { monthly: 7500, annual: 75000 },
+    scale: { monthly: 15000, annual: 150000 },
+  },
+  GH: {
+    growth: { monthly: 160, annual: 1600 },
+    scale: { monthly: 320, annual: 3200 },
+  },
+  ZA: {
+    growth: { monthly: 1000, annual: 10000 },
+    scale: { monthly: 4500, annual: 45000 },
+  },
+};
+
+planSms.default = planSms.US;
+
+export function getRawPlanSms(
+  countryCode: string | undefined,
+  planId: "essential" | "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+): number {
+  if (planId === "enterprise") return 0;
+  const key = countryCode ? countryCode.toUpperCase() : "US";
+  const mapping = planSms[key] || planSms.US;
+  return mapping?.[planId]?.[billing] ?? 0;
+}
+
+export function getFormattedPlanSms(
+  countryCode: string | undefined,
+  planId: "essential" | "growth" | "scale" | "enterprise",
+  billing: "monthly" | "annual",
+): string {
+  return new Intl.NumberFormat(undefined, {
+    maximumFractionDigits: 0,
+  }).format(getRawPlanSms(countryCode, planId, billing));
+}
+
 // Return raw credits (number) for a given country/plan/billing. Falls back
 // to `planTemplates` values multiplied by 1000 if no mapping exists.
 export function getRawPlanCredits(

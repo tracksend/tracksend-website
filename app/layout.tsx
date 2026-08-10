@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { HeapProvider } from "@/components/HeapProvider";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 import Script from "next/script";
 
@@ -87,8 +88,10 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <HeapProvider />
-        {children}
+        <PostHogProvider>
+          <HeapProvider />
+          {children}
+        </PostHogProvider>
         <Analytics />
       </body>
     </html>
