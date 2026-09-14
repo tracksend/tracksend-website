@@ -55,7 +55,7 @@ export default function CustomerEngagementCampaignPage() {
                 Tracksend helps businesses attract new customers and get existing customers to buy, book, or visit again — using targeted WhatsApp and SMS campaigns.
               </p>
               <Link href="https://tsn.pub/jui" className="mt-10 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-8 py-4 font-black text-navy shadow-lg shadow-cyan-200 transition hover:-translate-y-0.5 hover:shadow-xl">
-                Get Started <ArrowRight className="size-5" />
+                Book a Call <ArrowRight className="size-5" />
               </Link>
               <p className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-slate-500">
                 <Check className="size-4 text-cyan-600" /> No marketing team required • Fast setup
@@ -130,7 +130,7 @@ export default function CustomerEngagementCampaignPage() {
                 ))}
               </ul>
               <Link href="https://tsn.pub/jui" className="mt-8 inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-8 py-4 font-black text-navy shadow-lg shadow-cyan-200 transition hover:scale-105">
-                Get Started <ArrowRight className="size-5" />
+                Book a Call <ArrowRight className="size-5" />
               </Link>
               <p className="mt-4 text-sm font-semibold text-slate-500">Instant onboarding • Cancel anytime</p>
             </div>
