@@ -306,8 +306,8 @@ export const planSms: Record<
   }
 > = {
   US: {
-    growth: { monthly: 5000, annual: 50000 },
-    scale: { monthly: 10000, annual: 100000 },
+    growth: { monthly: 1200, annual: 2500 },
+    scale: { monthly: 12000, annual: 25000 },
   },
   GB: {
     growth: { monthly: 937, annual: 9375 },
